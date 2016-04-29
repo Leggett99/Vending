@@ -1,0 +1,5 @@
+To Do
+Create GUI
+Create wallet overlay
+Create Item Counter
+Create Profit Formulae
