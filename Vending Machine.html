@@ -28,7 +28,7 @@
                 if(wallet>price){
                 var tempvar = wallet -= price
                 tempvar = tempvar.toFixed(2)
-                confirm("Are you sure?")
+                confirm("Confirming payment of $" +price)
                                         
                 document.getElementById("money").innerHTML = "Your dosh $" + tempvar
                 }else{
