@@ -4,43 +4,50 @@
        <title>Nick, Tim and Josh Vending Machine</title>
              <script>
              var wallet = 0;
-             var PriceofCoke = 2.5;
-             var coins = new Array(6)
+			 var Coke = 0;
+			 var Pepsi = 0;
+             var coins = new Array(6);
 //coins 5c - $2
-             coins[0] = 0.05
-             coins[1] = 0.1
-             coins[2] = 0.2
-             coins[3] = 0.5
-             coins[4] = 1.0
-             coins[5] = 2.0
+             coins[0] = 0.05;
+             coins[1] = 0.1;
+             coins[2] = 0.2;
+             coins[3] = 0.5;
+             coins[4] = 1.0;
+             coins[5] = 2.0;
 //items coke and pepsi
-             var items = new Array(2)
-             items[0] = 4.45
-             items[1] = 4.95
-
+             var items = new Array();
+             items[0] = 4.45;
+             items[1] = 4.95;
              
              function wallet_add(money){
                 var tempvar = wallet += money
                 tempvar = tempvar.toFixed(2)
-                document.getElementById("money").innerHTML = "Your dosh $" + tempvar
+                document.getElementById("money").innerHTML = "Your balance in machine is: $" + tempvar
              }
              function pay(price){
                 if(wallet>price){
-                var tempvar = wallet -= price
-                tempvar = tempvar.toFixed(2)
-                confirm("Confirming payment of $" +price)
-                                        
-                document.getElementById("money").innerHTML = "Your dosh $" + tempvar
-                }else{
-                    alert("You haven't got the dosh to make that purchase my friend...");
-                }
+					var r = confirm("Confirming payment of $" +price)
+						if (r == true) {
+							alert("Thank you for your purchase!");
+								var tempvar = wallet -= price
+								tempvar = tempvar.toFixed(2)
+							}
+							else{
+								alert("We are sorry you changed your mind, Perhaps another item?")
+							} 
+						document.getElementById("money").innerHTML = "Your balance in machine is: $" + wallet
+					}
+					else{
+						alert("You haven't got the balance to make that purchase my friend...");
+					}
              }
              function change(){
-             wallet = wallet.toFixed(2)
-             alert ("Your change is $" + wallet)
-             wallet = 0;
-             document.getElementById("money").innerHTML = "Your balance in machine is: $" + wallet
-}
+				wallet = wallet.toFixed(2)
+				alert ("Your change is $" + wallet)
+				wallet = 0;
+				document.getElementById("money").innerHTML = "Your balance in machine is: $" + wallet
+			 }
+
  //           if (x.addEventListener) 
  //           {
  //               x.addEventListener("click", myFunction);
