@@ -1,11 +1,63 @@
+<!doctype HTML>
 <html>
+    <style>
+        .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px !important;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .closebtn {
+    font-size: 40px !important;
+    top: 15px;
+    right: 35px;
+  }
+}
+    </style>
     <head>
        <meta charset="utf-8"/>
        <title>Nick, Tim and Josh Vending Machine</title>
              <script>
              var wallet = 0;
-			 var Coke = 0;
-			 var Pepsi = 0;
+             var coke = 0;
+             var pepsi = 0;
              var coins = new Array(6);
 //coins 5c - $2
              coins[0] = 0.05;
@@ -14,40 +66,56 @@
              coins[3] = 0.5;
              coins[4] = 1.0;
              coins[5] = 2.0;
-//items coke and pepsi
-             var items = new Array();
-             items[0] = 4.45;
-             items[1] = 4.95;
              
              function wallet_add(money){
-                var tempvar = wallet += money
-                tempvar = tempvar.toFixed(2)
-                document.getElementById("money").innerHTML = "Your balance in machine is: $" + tempvar
+                var tempvar = wallet += money;
+                tempvar = tempvar.toFixed(2);
+                document.getElementById("money").innerHTML = "Your balance in machine is: $" + tempvar;
              }
-             function pay(price){
-                if(wallet>price){
-					var r = confirm("Confirming payment of $" +price)
-						if (r == true) {
-							alert("Thank you for your purchase!");
-								var tempvar = wallet -= price
-								tempvar = tempvar.toFixed(2)
-							}
-							else{
-								alert("We are sorry you changed your mind, Perhaps another item?")
-							} 
-						document.getElementById("money").innerHTML = "Your balance in machine is: $" + wallet
-					}
-					else{
-						alert("You haven't got the balance to make that purchase my friend...");
-					}
+             function pay_coke(){
+                if(wallet>4.45){
+                    var r = confirm("Confirming payment of $4.95")
+                        if (r == true) {
+                            alert("Thank you for your purchase!");
+                                var tempvar = wallet -= 4.95;
+                                tempvar = tempvar.toFixed(2);
+                                coke += 1;
+                                document.getElementById("coke").innerHTML = "Amount of cokes sold this session:" +coke;
+                            }
+                            else{
+                                alert("We are sorry you changed your mind, Perhaps another item?");
+                            } 
+                        document.getElementById("money").innerHTML = "Your balance in machine is: $" + wallet
+                    }
+                    else{
+                        alert("You haven't got the balance to make that purchase my friend...");
+                    }
+             }
+             function pay_pepsi(){
+                if(wallet>4.95){
+                    var r = confirm("Confirming payment of $4.95");
+                        if (r == true) {
+                            alert("Thank you for your purchase!");
+                                var tempvar = wallet -= 4.95;
+                                tempvar = tempvar.toFixed(2);
+                                pepsi += 1;
+                                document.getElementById("pepsi").innerHTML = "Amount of Pepsi sold this session:" +pepsi;
+                            }
+                            else{
+                                alert("We are sorry you changed your mind, Perhaps another item?");
+                            } 
+                            document.getElementById("money").innerHTML = "Your balance in machine is: $" + wallet
+                    }
+                    else{
+                        alert("You haven't got the balance to make that purchase my friend...");
+                    }
              }
              function change(){
-				wallet = wallet.toFixed(2)
-				alert ("Your change is $" + wallet)
-				wallet = 0;
-				document.getElementById("money").innerHTML = "Your balance in machine is: $" + wallet
-			 }
-
+                tempvar = tempvar.toFixed(2)
+                alert ("Your change is $" + wallet)
+                wallet = 0;
+                document.getElementById("money").innerHTML = "Your balance in machine is: $" + wallet
+             }
  //           if (x.addEventListener) 
  //           {
  //               x.addEventListener("click", myFunction);
@@ -55,8 +123,6 @@
  //             {
  //               x.attachEvent("onclick", myFunction);
  //             }
-
-
  function paybtn() {
     confirm("Confirm Payment?");
 }
@@ -64,20 +130,39 @@
     </head>
     <h1>Vending Machine</h1>
     <body>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <div class="overlay-content">
+            <img src="5cents.png" alt="5 cents" height="75" width="75" id="1" onClick="wallet_add(coins[0])">
+            <img src="10cents.png" alt="10 cents" height="85" width="85" onClick="wallet_add(coins[1])">
+            <img src="20cents.png" alt="20 cents" height="95" width="95" onClick="wallet_add(coins[2])">
+            <img src="50cents.png" alt="50 cents" height="100" width="100" onClick="wallet_add(coins[3])">
+            <img src="1dorra.png" alt="1 dollar" height="85" width="85" onClick="wallet_add(coins[4])">
+            <img src="2dorra.png" alt="2 dollars" height="75" width="75" onClick="wallet_add(coins[5])">
+            
+        </div>
+        </div>
+
                                <center> <img src="layout.png" alt="Layout" height="600" width="600"></center>
                                  <left> <p id="money"></p>
-                                        <button onclick="paybtn()">Pay</button>
-                                        <img src="5cents.png" alt="5 cents" height="75" width="75" id="1" onClick="wallet_add(coins[0])">
-                                        <img src="10cents.png" alt="10 cents" height="85" width="85" onClick="wallet_add(coins[1])">
-                                        <img src="20cents.png" alt="20 cents" height="95" width="95" onClick="wallet_add(coins[2])">
-                                        <img src="50cents.png" alt="50 cents" height="100" width="100" onClick="wallet_add(coins[3])">
-                                        <img src="1dorra.png" alt="1 dollar" height="85" width="85" onClick="wallet_add(coins[4])">
-                                        <img src="2dorra.png" alt="2 dollars" height="75" width="75" onClick="wallet_add(coins[5])">
+                                        <p id="coke"></p>
+                                        <p id="pepsi"></p>
                                 <form>
-                                        <input type="button" value="Coke 600mL - $4.45" onClick="pay(items[0])">
-                                        <input type="button" value="Pepsi 600mL - $4.95" onClick="pay(items[1])">
+                                        <input type="button" value="Coke 600mL - $4.45" onClick="pay_coke()">
+                                        <input type="button" value="Pepsi 600mL - $4.95" onClick="pay_pepsi()">
                                         <input type="button" value="Change" onClick="change()">
                                         <input type="button" onClick="history.go(0)" VALUE="Reset">
                                 </form>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">Wallet</span>
+
+<script>
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
+</script>
     </body>
 </html>
