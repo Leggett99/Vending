@@ -1,6 +1,9 @@
 <!doctype HTML>
 <html>
     <style>
+    div{
+        color: white;
+    }
         .overlay {
     height: 100%;
     width: 0;
@@ -66,49 +69,46 @@
              coins[3] = 0.5;
              coins[4] = 1.0;
              coins[5] = 2.0;
-//Wallet Functions
+             
              function wallet_add(money){
                 var tempvar = wallet += money;
-                tempvar = tempvar.toFixed(2);
+                tempvar=tempvar.toFixed(2);
                 document.getElementById("money").innerHTML = "Your balance in machine is: $" + tempvar;
-             }
-			 function change(money){
-                var tempvar = money += wallet;
-                tempvar = tempvar.toFixed(2)
-                alert("Your change is $" +money);
-                wallet = 0;
-                document.getElementById("money").innerHTML = "Your balance in machine is: $" + wallet;
-             }
+                document.getElementById("overmoney").innerHTML= "Your balance in machine is: $" + tempvar;
+                }
+             function change(){
+                 var money1 = wallet;
+                 alert ("Your change is $" + money1);
+                 wallet = 0;
+                 document.getElementById("money").innerHTML = "Your balance in machine is: $" + wallet
+                 }
+             //Overlay functions
 
-//overlay functions
-	function openNavWallet() {
-		document.getElementById("myNav").style.width = "100%";
-		document.getElementById("myNav").style.color = "blue";
-	}
-		function Admin(x) {
-			if(x.id.value = "pass"){
-				document.getElementById("coke");
-				document.getElementById("pepsi");
-			}
-			else{
-				alert("Invalid Password! Access Denied!");
-				return false;
-			}
-	}
+            function Admin(x) {
+                if(x.id.value = "pass"){
+                    document.getElementById("coke").innerHTML = "Amount of Cokes Sold this session: " +coke;
+                    document.getElementById("pepsi").innerHTML= "Amount of Pepsi sold this session: " +pepsi;
+                }
+                else{
+                    alert("Invalid Password! Access Denied!");
+                    return false;
+                }
+            }
+             function openNav() {
+                document.getElementById("myNav").style.width = "100%";
+                document.getElementById("overmoney").innerHTML= "Your balance in machine is: $" + wallet;
+                }
 
-	function closeNav() {
-		document.getElementById("myNav").style.width = "0%";
-		document.getElementById("myNav1").style.width = "0%";
-	}
-			 
-			 
-//Pay functions
+            function closeNav() {
+                document.getElementById("myNav").style.width = "0%";
+                }
              function pay_coke(){
                 if(wallet>4.45){
                     var r = confirm("Confirming payment of $4.95")
                         if (r == true) {
                             alert("Thank you for your purchase!");
                                 var tempvar = wallet -= 4.95;
+                                wallet = wallet.toFixed(2);
                                 tempvar = tempvar.toFixed(2);
                                 coke += 1;
                             }
@@ -128,6 +128,7 @@
                             alert("Thank you for your purchase!");
                                 var tempvar = wallet -= 4.95;
                                 tempvar = tempvar.toFixed(2);
+                                wallet = wallet.toFixed(2);
                                 pepsi += 1;
                             }
                             else{
@@ -139,6 +140,16 @@
                         alert("You haven't got the balance to make that purchase my friend...");
                     }
              }
+ //           if (x.addEventListener) 
+ //           {
+ //               x.addEventListener("click", myFunction);
+ //             } else if (x.attachEvent) 
+ //             {
+ //               x.attachEvent("onclick", myFunction);
+ //             }
+ function paybtn() {
+    confirm("Confirm Payment?");
+}
          </script>
     </head>
     <h1>Vending Machine</h1>
@@ -146,42 +157,33 @@
         <div id="myNav" class="overlay">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <div class="overlay-content">
-			<script>
-			document.write("Your balance in machine is: $" + wallet);
-			</script>
-			<p>
             <img src="5cents.png" alt="5 cents" height="75" width="75" id="1" onClick="wallet_add(coins[0])">
             <img src="10cents.png" alt="10 cents" height="85" width="85" onClick="wallet_add(coins[1])">
             <img src="20cents.png" alt="20 cents" height="95" width="95" onClick="wallet_add(coins[2])">
             <img src="50cents.png" alt="50 cents" height="100" width="100" onClick="wallet_add(coins[3])">
             <img src="1dorra.png" alt="1 dollar" height="85" width="85" onClick="wallet_add(coins[4])">
             <img src="2dorra.png" alt="2 dollars" height="75" width="75" onClick="wallet_add(coins[5])">
+            <p id=overmoney></p>
         </div>
         </div>
 
-                               <center> <img src="layout.png" alt="Layout" height="600" width="600"></center>
-                                 <left><p id="money"></p>
-								 <left><p id="coke"></p>
-                                 <left><p id="pepsi"></p>
-                                <center>
-								<form>
+                               <center> <img src="layout.png" alt="Layout" height="600" width="600">
+                                        <p id="money"></p>
+                                        <p id="coke"></p>
+                                        <p id="pepsi"></p>
+                                <form>
                                         <input type="button" value="Coke 600mL - $4.45" onClick="pay_coke()">
                                         <input type="button" value="Pepsi 600mL - $4.95" onClick="pay_pepsi()">
                                         <input type="button" value="Change" onClick="change()">
                                         <input type="button" onClick="history.go(0)" VALUE="Reset">
                                 </form>
-								<right>
-								<p>
-			<span style="font-size:30px;cursor:pointer" onclick="openNavWallet()">Wallet</span>
-		<p>
-		<form>
-			<p>Password:<input type="password" name="pass"></p>
+                                        <span style="font-size:30px;cursor:pointer" onclick="openNav()">Wallet</span>
+                                <p>
+                                <form>
+                                    <p>Password:<input type="password" name="pass"></p>
 
-			<p><input type="button" value="Login" onClick="Admin(this.form)"></p>
-		</form>
-
-
-<script>
-</script>
+                                    <p><input type="button" value="Login" onClick="Admin(this.form)"></p>
+                                </form>
+                                </center>
     </body>
 </html>

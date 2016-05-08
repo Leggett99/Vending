@@ -1,5 +1,5 @@
 To Do
 Create GUI
-Create wallet overlay
-Create Item Counter
+Create wallet overlay - Almost Complete
+Create Item Counter - Complete, Needs implimentation
 Create Profit Formulae
