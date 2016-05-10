@@ -88,6 +88,7 @@
                 if(x.id.value = "pass"){
                     document.getElementById("coke").innerHTML = "Amount of Cokes Sold this session: " +coke;
                     document.getElementById("pepsi").innerHTML= "Amount of Pepsi sold this session: " +pepsi;
+                    document.getElementById("admin").reset();
                 }
                 else{
                     alert("Invalid Password! Access Denied!");
@@ -172,7 +173,7 @@
                                 </form>
                                         <span style="font-size:30px;cursor:pointer" onclick="openNav()">Wallet</span>
                                 <p>
-                                <form>
+                                <form id="admin">
                                     <p>Password:<input type="password" name="pass"></p>
 
                                     <p><input type="button" value="Login" onClick="Admin(this.form)"></p>
