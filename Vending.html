@@ -48,6 +48,9 @@
     right: 35px;
   }
 }
+    table, th, td {
+        border: 2px solid black;
+}
     </style>
     <head>
        <meta charset="utf-8"/>
@@ -64,7 +67,7 @@
              coins[3] = 0.5;
              coins[4] = 1.0;
              coins[5] = 2.0;
-             
+//Money Functions
              function wallet_add(money){
                 var tempvar = wallet += money;
                 tempvar=tempvar.toFixed(2);
@@ -89,7 +92,7 @@
                     return false;
                 }
             }
-             //Overlay functions
+//Overlay functions
              function openNav() {
                 document.getElementById("myNav").style.width = "100%";
                 document.getElementById("overmoney").innerHTML= "Your balance in machine is: $" + wallet;
@@ -140,7 +143,7 @@
     <h1>Team Vending Machine</h1>
     <body>
         <div id="myNav" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Ã—</a>
         <div class="overlay-content">
             <img src="5cents.png" alt="5 cents" height="75" width="75" id="1" onClick="wallet_add(coins[0])">
             <img src="10cents.png" alt="10 cents" height="85" width="85" onClick="wallet_add(coins[1])">
@@ -151,24 +154,39 @@
             <p id=overmoney></p>
         </div>
         </div>
+         <table style="width:100%">
+           <tr>
+               <td><img src="Coke.png" alt="coke" style="width:100px;height:250px;" onClick="pay_coke()"></td>
+               <td><img src="Fanta.png" alt="fanta" style="width:100px;height:250px;"></td>        
+               <td><form id=admin>
+                       <p>Password:<input type="password" name="pass"></p>
+                       <p><input type="button" value="Login" onClick="Admin(this.form)"></p>
+                   </form>
+               </td>
+           </tr>
+           <tr>
+               <td><img src="Pepsi.png" alt="pepsi" style="width:100px;height:250px;"onClick="pay_pepsi()"></td></td>
+               <td></td>       
+               <td>
+                 <form>
+                    <input type="button" value="Change" onClick="change()">
+                    <input type="button" onClick="history.go(0)" VALUE="Reset">
+                 </form>
+               </td>
+           </tr>
+           <tr>
+               <td></td>
+               <td></td>       
+               <td id="purchconf"></td>
+           </tr>
+       </table>
+                        <p id="money"></p>
+                        <p id="coke"></p>
+                        <p id="pepsi"></p>
+                                <center>
 
-                               <center> <img src="layout.png" alt="Layout" height="600" width="600">
-                                        <p id="money"></p>
-                                        <p id="coke"></p>
-                                        <p id="pepsi"></p>
-                                <form>
-                                        <input type="button" value="Coke 600mL - $4.45" onClick="pay_coke()">
-                                        <input type="button" value="Pepsi 600mL - $4.95" onClick="pay_pepsi()">
-                                        <input type="button" value="Change" onClick="change()">
-                                        <input type="button" onClick="history.go(0)" VALUE="Reset">
-                                </form>
                                         <span style="font-size:30px;cursor:pointer" onclick="openNav()">Wallet</span>
                                 <p>
-                                <form id=admin>
-                                    <p>Password:<input type="password" name="pass"></p>
-
-                                    <p><input type="button" value="Login" onClick="Admin(this.form)"></p>
-                                </form>
-                                </center>
+                                                                </center>
     </body>
 </html>
