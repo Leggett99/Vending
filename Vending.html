@@ -80,15 +80,15 @@
                  wallet = 0;
                  document.getElementById("money").innerHTML = "Your balance in machine is: $" + wallet
                  }
-                 //Password
+   //Password
             function Admin(x) {
-                if(x.id.value = "pass"){
+                if(x.pass.value == "pass"){
                     document.getElementById("coke").innerHTML = "Amount of Cokes Sold this session: " +coke;
                     document.getElementById("pepsi").innerHTML= "Amount of Pepsi sold this session: " +pepsi;
                     document.getElementById("admin").reset();
                 }
                 else{
-                    alert("Invalid Password! Access Denied!");
+                    document.getElementById("coke").innerHTML = "Invalid Password Entered, Access is Denied";
                     return false;
                 }
             }
