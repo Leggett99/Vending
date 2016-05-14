@@ -73,6 +73,9 @@
                 tempvar=tempvar.toFixed(2);
                 document.getElementById("money").innerHTML = "Your balance in machine is: $" + tempvar;
                 document.getElementById("overmoney").innerHTML= "Your balance in machine is: $" + tempvar;
+                document.getElementById("coke").innerHTML = "";
+                document.getElementById("pepsi").innerHTML = "";
+                document.getElementById("purchconf").innerHTML = "";
                 }
              function change(){
                 if(wallet>0){
@@ -101,12 +104,14 @@
                     document.getElementById("coke").innerHTML = "Amount of Cokes Sold this session: " +coke;
                     document.getElementById("pepsi").innerHTML= "Amount of Pepsi sold this session: " +pepsi;
                     document.getElementById("purchconf").innerHTML = "";
-                    document.getElementById("money").innerHTML = "";
+                    document.getElementById("money").innerHTML = "Welcome Admin!";
                     document.getElementById("admin").reset();
                 }
                 else{
                     document.getElementById("purchconf").innerHTML = "Invalid Password Entered, Access is Denied";
                     document.getElementById("money").innerHTML = "";
+                    document.getElementById("purchconf").innerHTML = "";
+                    document.getElementById("admin").reset();
                     return false;
                 }
             }
