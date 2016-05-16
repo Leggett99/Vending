@@ -48,6 +48,9 @@
     right: 35px;
   }
 }
+    table, th, td {
+        border: 2px solid black;
+}
     </style>
     <head>
        <meta charset="utf-8"/>
@@ -64,32 +67,55 @@
              coins[3] = 0.5;
              coins[4] = 1.0;
              coins[5] = 2.0;
-             
+//Money Functions
              function wallet_add(money){
                 var tempvar = wallet += money;
                 tempvar=tempvar.toFixed(2);
                 document.getElementById("money").innerHTML = "Your balance in machine is: $" + tempvar;
                 document.getElementById("overmoney").innerHTML= "Your balance in machine is: $" + tempvar;
+                document.getElementById("coke").innerHTML = "";
+                document.getElementById("pepsi").innerHTML = "";
+                document.getElementById("purchconf").innerHTML = "";
                 }
              function change(){
-                 var money1 = wallet;
-                 alert ("Your change is $" + money1);
-                 wallet = 0;
-                 document.getElementById("money").innerHTML = "Your balance in machine is: $" + wallet
+                if(wallet>0){
+                  var money1 = wallet;
+                  alert ("Your change is $" + money1);
+                  wallet = 0;
+                  coke = 0;
+                  pepsi = 0;
+                  document.getElementById("money").innerHTML = "Welcome, Please insert some money to continue.";
+                  document.getElementById("coke").innerHTML = "";
+                  document.getElementById("pepsi").innerHTML = "";
+                  document.getElementById("purchconf").innerHTML = "";
+                }
+                else{
+                  document.getElementById("money").innerHTML = "Welcome, Please insert some money to continue.";
+                  document.getElementById("coke").innerHTML = "";
+                  document.getElementById("pepsi").innerHTML = "";
+                  document.getElementById("purchconf").innerHTML = "";
+                }
+                 
+
                  }
-                 //Password
+   //Password
             function Admin(x) {
-                if(x.id.value = "pass"){
+                if(x.pass.value == "pass"){
                     document.getElementById("coke").innerHTML = "Amount of Cokes Sold this session: " +coke;
                     document.getElementById("pepsi").innerHTML= "Amount of Pepsi sold this session: " +pepsi;
+                    document.getElementById("purchconf").innerHTML = "";
+                    document.getElementById("money").innerHTML = "Welcome Admin!";
                     document.getElementById("admin").reset();
                 }
                 else{
-                    alert("Invalid Password! Access Denied!");
+                    document.getElementById("purchconf").innerHTML = "Invalid Password Entered, Access is Denied";
+                    document.getElementById("money").innerHTML = "";
+                    document.getElementById("purchconf").innerHTML = "";
+                    document.getElementById("admin").reset();
                     return false;
                 }
             }
-             //Overlay functions
+//Overlay functions
              function openNav() {
                 document.getElementById("myNav").style.width = "100%";
                 document.getElementById("overmoney").innerHTML= "Your balance in machine is: $" + wallet;
@@ -101,19 +127,19 @@
                 if(wallet>4.45){
                     var r = confirm("Confirming payment of $4.95")
                         if (r == true) {
-                            alert("Thank you for your purchase!");
+                             document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
                                 var tempvar = wallet -= 4.95;
                                 wallet = wallet.toFixed(2);
                                 tempvar = tempvar.toFixed(2);
                                 coke += 1;
                             }
                             else{
-                                alert("We are sorry you changed your mind, Perhaps another item?");
+                                document.getElementById("purchconf").innerHTML= "We are sorry you changed your mind, Perhaps another item?";
                             } 
                         document.getElementById("money").innerHTML = "Your balance in machine is: $" + wallet
                     }
                     else{
-                        alert("You haven't got the balance to make that purchase my friend...");
+                        document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
                     }
              }
              function pay_pepsi(){
@@ -138,9 +164,9 @@
          </script>
     </head>
     <h1>Team Vending Machine</h1>
-    <body>
+    <body onload="change()">
         <div id="myNav" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Ã—</a>
         <div class="overlay-content">
             <img src="5cents.png" alt="5 cents" height="75" width="75" id="1" onClick="wallet_add(coins[0])">
             <img src="10cents.png" alt="10 cents" height="85" width="85" onClick="wallet_add(coins[1])">
@@ -151,24 +177,43 @@
             <p id=overmoney></p>
         </div>
         </div>
+         <table style="width:100%">
+           <tr>
+               <td><img src="Coke.png" alt="coke" style="width:100px;height:250px;" onClick="pay_coke()"></td>
+               <td><img src="Fanta.png" alt="fanta" style="width:100px;height:250px;"></td>        
+               <td>
+                  <p id="money"></p>
+                  <p id="coke"></p>
+                  <p id="pepsi"></p>
+                  <p id="purchconf"></p>
 
-                               <center> <img src="layout.png" alt="Layout" height="600" width="600">
-                                        <p id="money"></p>
-                                        <p id="coke"></p>
-                                        <p id="pepsi"></p>
-                                <form>
-                                        <input type="button" value="Coke 600mL - $4.45" onClick="pay_coke()">
-                                        <input type="button" value="Pepsi 600mL - $4.95" onClick="pay_pepsi()">
-                                        <input type="button" value="Change" onClick="change()">
-                                        <input type="button" onClick="history.go(0)" VALUE="Reset">
-                                </form>
+               </td>
+           </tr>
+           <tr>
+               <td><img src="Pepsi.png" alt="pepsi" style="width:100px;height:250px;"onClick="pay_pepsi()"></td></td>
+               <td></td>       
+               <td>
+                 <form>
+                    <input type="button" value="Change" onClick="change()">
+                 </form>
+               </td>
+           </tr>
+           <tr>
+               <td></td>
+               <td></td>       
+               <td>
+                  <form id=admin>
+                    <p>Password:<input type="password" name="pass"></p>
+                    <p><input type="button" value="Login" onClick="Admin(this.form)"></p>
+                  </form>
+               </td>
+           </tr>
+       </table>
+
+                                <center>
+
                                         <span style="font-size:30px;cursor:pointer" onclick="openNav()">Wallet</span>
                                 <p>
-                                <form id=admin>
-                                    <p>Password:<input type="password" name="pass"></p>
-
-                                    <p><input type="button" value="Login" onClick="Admin(this.form)"></p>
-                                </form>
-                                </center>
+                                                                </center>
     </body>
 </html>
