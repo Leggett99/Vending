@@ -59,6 +59,7 @@
              var wallet = 0;
              var coke = 0;
              var pepsi = 0;
+			 var fanta = 0;
              var coins = new Array(6);
 //coins 5c - $2
              coins[0] = 0.05;
@@ -75,6 +76,7 @@
                 document.getElementById("overmoney").innerHTML= "Your balance in machine is: $" + tempvar;
                 document.getElementById("coke").innerHTML = "";
                 document.getElementById("pepsi").innerHTML = "";
+				document.getElementById("fanta").innerHTML = "";
                 document.getElementById("purchconf").innerHTML = "";
                 }
              function change(){
@@ -87,12 +89,14 @@
                   document.getElementById("money").innerHTML = "Welcome, Please insert some money to continue.";
                   document.getElementById("coke").innerHTML = "";
                   document.getElementById("pepsi").innerHTML = "";
+				  document.getElementById("fanta").innerHTML = "";
                   document.getElementById("purchconf").innerHTML = "";
                 }
                 else{
                   document.getElementById("money").innerHTML = "Welcome, Please insert some money to continue.";
                   document.getElementById("coke").innerHTML = "";
                   document.getElementById("pepsi").innerHTML = "";
+				  document.getElementById("fanta").innerHTML = "";
                   document.getElementById("purchconf").innerHTML = "";
                 }
                  
@@ -103,6 +107,7 @@
                 if(x.pass.value == "pass"){
                     document.getElementById("coke").innerHTML = "Amount of Cokes Sold this session: " +coke;
                     document.getElementById("pepsi").innerHTML= "Amount of Pepsi sold this session: " +pepsi;
+					document.getElementById("fanta").innerHTML= "Amount of Fanta sold this session: " +fanta;
                     document.getElementById("purchconf").innerHTML = "";
                     document.getElementById("money").innerHTML = "Welcome Admin!";
                     document.getElementById("admin").reset();
@@ -125,10 +130,10 @@
                 }
              function pay_coke(){
                 if(wallet>4.45){
-                    var r = confirm("Confirming payment of $4.95")
+                    var r = confirm("Confirming payment of $4.45")
                         if (r == true) {
                              document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
-                                var tempvar = wallet -= 4.95;
+                                var tempvar = wallet -= 4.45;
                                 wallet = wallet.toFixed(2);
                                 tempvar = tempvar.toFixed(2);
                                 coke += 1;
@@ -161,6 +166,24 @@
                         alert("You haven't got the balance to make that purchase my friend...");
                     }
              }
+			 function pay_fanta(){
+                if(wallet>4.25){
+                    var r = confirm("Confirming payment of $4.25")
+                        if (r == true) {
+                             document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
+                                var tempvar = wallet -= 4.25;
+                                wallet = wallet.toFixed(2);
+                                tempvar = tempvar.toFixed(2);
+                            }
+                            else{
+                                document.getElementById("purchconf").innerHTML= "We are sorry you changed your mind, Perhaps another item?";
+                            } 
+                        document.getElementById("money").innerHTML = "Your balance in machine is: $" + wallet
+                    }
+                    else{
+                        document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
+                    }
+             }
          </script>
     </head>
     <h1>Team Vending Machine</h1>
@@ -180,11 +203,12 @@
          <table style="width:100%">
            <tr>
                <td><img src="Coke.png" alt="coke" style="width:100px;height:250px;" onClick="pay_coke()"></td>
-               <td><img src="Fanta.png" alt="fanta" style="width:100px;height:250px;"></td>        
+               <td><img src="Fanta.png" alt="fanta" style="width:100px;height:250px;" onClick="pay_fanta()"</td>        
                <td>
                   <p id="money"></p>
                   <p id="coke"></p>
                   <p id="pepsi"></p>
+				  <p id="fanta"></p>
                   <p id="purchconf"></p>
 
                </td>
