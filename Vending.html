@@ -81,6 +81,14 @@
              coins[3] = 0.5;
              coins[4] = 1.0;
              coins[5] = 2.0;
+			 
+//Money Notes if we do them			 
+			 var notes = new Array(5);
+			 notes[0] = 5.0;
+			 notes[1] = 10.0;
+			 notes[2] = 20.0;
+			 notes[3] = 50.0;
+			 notes[4] = 100.0;
 //Money Functions
              function wallet_add(money){
                 var tempvar = wallet += money;   
@@ -160,7 +168,7 @@
                         }
                      }
                     else{
-                        document.getElementById("purchconf").innerHTML = "Our stock of coke is actually out at the moment, contact the admin to get more stock in."
+                        document.getElementById("purchconf").innerHTML = "Our stock of Coke is actually out at the moment, contact the admin to get more stock in."
                     }
              }
              function pay_pepsi(){
@@ -185,7 +193,7 @@
                         }
                         }
                         else{
-                        document.getElementById("purchconf").innerHTML = "Our stock of Fanta is actually out at the moment, contact the admin to get more stock in.";
+                        document.getElementById("purchconf").innerHTML = "Our stock of Pepsi is actually out at the moment, contact the admin to get more stock in.";
                     }
                  
              }
@@ -227,7 +235,13 @@
             <img src="50cents.png" alt="50 cents" height="100" width="100" onClick="wallet_add(coins[3])">
             <img src="1dorra.png" alt="1 dollar" height="85" width="85" onClick="wallet_add(coins[4])">
             <img src="2dorra.png" alt="2 dollars" height="75" width="75" onClick="wallet_add(coins[5])">
-            <p id=overmoney></p>
+			<br>
+			<img src="kumanatorhead.png" alt="5 dollars" height="75" width="75" onClick="wallet_add(notes[0])">
+			<img src="10dorra.png" alt="10 dollars" height="75" width="75" onClick="wallet_add(notes[1])">
+			<img src="20dorra.png" alt="20 dollars" height="75" width="75" onClick="wallet_add(notes[2])">
+			<img src="50dorra.png" alt="50 dollars" height="75" width="75" onClick="wallet_add(notes[3])">
+			<img src="100dorra.png" alt="100 dollars" height="75" width="75" onClick="wallet_add(notes[4])">
+			<p id=overmoney></p>
         </div>
         </div>
          <table style="width:100%">
