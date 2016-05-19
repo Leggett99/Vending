@@ -76,6 +76,8 @@
              stock[1] = 8;
              //fanta stock
              stock[2] = 8;
+             //solo stock
+             stock[3] = 8;
              
 //Sold
              var sold = new Array();
@@ -85,6 +87,8 @@
              sold[1] = 0;
              //Fanta
              sold[2] = 0;
+             //Solo
+             sold[3] = 0;
 //coins 5c - $2
              var coins = new Array(6);
              coins[0] = 0.05;
@@ -126,18 +130,20 @@
                  
                 }
    //Admin Panel
-            function stock(){
-                stock[0] += 8;
-                stock[1] += 8;
-                stock[2] += 8;
-                document.getElementById("purchconf").innerHTML = "Coke left: " +stock[0] + "<br> Pepsi left: " + stock[1] + "<br> Fanta left: " + stock[2];
+             function refill(){
+                stock[0] = 8;
+                stock[1] = 8;
+                stock[2] = 8;
+                stock[3] = 8;
+                
+                document.getElementById("purchconf").innerHTML = "Coke left: " +stock[0] + "<br> Pepsi left: " + stock[1] + "<br> Fanta left: " + stock[2] + "<br> Solo left: " + stock[3];
             }
             function Admin(x) {
                 if(x.pass.value == "pass"){
                     document.getElementById("money").innerHTML = "Welcome Admin!";
-                    document.getElementById("sold").innerHTML = "Amount of Cokes sold since last stock: " + sold[0] + "<br>Amount of Pepsi sold since last stock: " + sold[1] + "<br>Amount of Fanta sold since last stock: " + sold[2] ;
-                    document.getElementById("purchconf").innerHTML = "Coke left: " +stock[0] + "<br> Pepsi left: " + stock[1] + "<br> Fanta left: " + stock[2];
-                   document.getElementById("npurch").innerHTML = "<button onClick='readrst()'>Return</button><button onClick='stock()'>Fill Stock</button>";
+                    document.getElementById("sold").innerHTML = "Amount of Cokes sold since last stock: " + sold[0] + "<br>Amount of Pepsi sold since last stock: " + sold[1] + "<br>Amount of Fanta sold since last stock: " + sold[2] + "<br>Amount of Solo sold since last stock: " + sold[3];
+                    document.getElementById("purchconf").innerHTML = "Coke left: " +stock[0] + "<br> Pepsi left: " + stock[1] + "<br> Fanta left: " + stock[2] + "<br> Solo left: " + stock[3];
+                   document.getElementById("npurch").innerHTML = "<button onClick='readrst()'>Return</button><button onClick='refill()'>Fill Stock</button>";
                     document.getElementById("admin").reset();
                 }
                 else{
@@ -237,6 +243,31 @@
                         document.getElementById("purchconf").innerHTML = "Our stock of Fanta is actually out at the moment, contact the admin to get more stock in."
                     }
              }
+             function pay_solo(){
+                if(stock[3] > 0){
+                    if(wallet>4.15){
+                        var r = confirm("Confirming payment of $4.15")
+                            if (r == true) {
+                                 document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
+                                    var tempvar = wallet -= 4.15;
+                                    wallet = wallet.toFixed(2);
+                                    tempvar = tempvar.toFixed(2);
+                                    sold[3] += 1;
+                                    stock[3] -= 1;
+                                }
+                                else{
+                                    document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
+                                } 
+                            document.getElementById("money").innerHTML = "Balance: $" + wallet
+                        }
+                        else{
+                            document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
+                        }
+                    }
+                    else{
+                        document.getElementById("purchconf").innerHTML = "Our stock of Solo is actually out at the moment, contact the admin to get more stock in."
+                    }
+             }
          </script>
     </head>
     <h1>Team Vending Machine</h1>
@@ -272,8 +303,8 @@
                </td>
            </tr>
            <tr>
-               <td><img src="Pepsi.png" alt="pepsi" style="width:100px;height:250px;"onClick="pay_pepsi()"></td></td>
-               <td></td>       
+               <td><img src="Pepsi.png" alt="pepsi" style="width:100px;height:250px;"onClick="pay_pepsi()"></td>
+               <td><img src="Solo.png" alt="solo" style="width:100px;height:250px;"onClick="pay_solo()"></td>       
                <td>
                  <form>
                     <input type="button" value="Change" onClick="change()">
@@ -291,6 +322,7 @@
                </td>
            </tr>
        </table>
+
                         <center>
 
                             <span style="font-size:30px;cursor:pointer" onclick="openNav()">Wallet</span>
