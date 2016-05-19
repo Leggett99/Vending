@@ -117,7 +117,7 @@
                 document.getElementById("sold").innerHTML = "";
                 document.getElementById("purchconf").innerHTML = "";
                 }
-             function coin_add(money){
+             function note_add(money){
                 notesnd.play();
                 var tempvar = wallet += money;   
                 tempvar = wallet.toFixed(2);       
@@ -213,8 +213,7 @@
                             if (r == true) {
                                 alert("Thank you for your purchase!");
                                     var tempvar = wallet -= 4.95;
-                                    tempvar walletar.toFixed(2);
-                                    wallet = wallet.toFixed(2);
+                                    tempvar = wallet.toFixed(2);
                                     sold[1] += 1;
                                     stock[1] -= 1;
                                     bottlesnd.play();
