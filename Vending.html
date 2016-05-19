@@ -68,6 +68,8 @@
        <meta charset="utf-8"/>
        <title>Nick, Tim and Josh Vending Machine</title>
              <script>
+             var coinsnd = new Audio("short_coin_drop.ogg");
+             var bottlesnd = new Audio("bottle drop.ogg");
              var wallet = 0;
              var stock = new Array();
              //coke stock
@@ -106,6 +108,7 @@
              notes[4] = 100.0;
 //Money Functions
              function wallet_add(money){
+                coinsnd.play();
                 var tempvar = wallet += money;   
                 tempvar = tempvar.toFixed(2);       
                 document.getElementById("money").innerHTML = "Balance: $" + tempvar;
@@ -178,6 +181,7 @@
                                     tempvar = tempvar.toFixed(2);
                                     sold[0] += 1;
                                     stock[0] -= 1;
+                                    bottlesnd.play();
                                 }
                                 else{
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
@@ -203,6 +207,7 @@
                                     wallet = wallet.toFixed(2);
                                     sold[1] += 1;
                                     stock[1] -= 1;
+                                    bottlesnd.play();
                                 }
                                 else{
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
@@ -229,6 +234,7 @@
                                     tempvar = tempvar.toFixed(2);
                                     sold[2] += 1;
                                     stock[2] -= 1;
+                                    bottlesnd.play();
                                 }
                                 else{
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
@@ -254,6 +260,7 @@
                                     tempvar = tempvar.toFixed(2);
                                     sold[3] += 1;
                                     stock[3] -= 1;
+                                    bottlesnd.play();
                                 }
                                 else{
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
