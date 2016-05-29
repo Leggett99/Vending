@@ -68,11 +68,11 @@
        <meta charset="utf-8"/>
        <title>Nick, Tim and Josh Vending Machine</title>
              <script>
-             var coinsnd = new Audio("short_coin_drop.ogg");
-             var bottlesnd = new Audio("bottle drop.ogg");
-             var notesnd = new Audio("insert note.ogg")
-             var wallet = 0;
-             var stock = new Array();
+            var coinsnd = new Audio("short_coin_drop.ogg");
+            var bottlesnd = new Audio("bottle drop.ogg");
+            var notesnd = new Audio("insert note.ogg")
+            var wallet = 0;
+            var stock = new Array();
              //coke stock
              stock[0] = 8;
              //pepsi stock
@@ -83,7 +83,7 @@
              stock[3] = 8;
              
 //Sold
-             var sold = new Array();
+            var sold = new Array();
              //Coke
              sold[0] = 0;
              //Pepsi
@@ -93,7 +93,7 @@
              //Solo
              sold[3] = 0;
 //coins 5c - $2
-             var coins = new Array(6);
+            var coins = new Array(6);
              coins[0] = 0.05;
              coins[1] = 0.1;
              coins[2] = 0.2;
@@ -101,14 +101,14 @@
              coins[4] = 1.0;
              coins[5] = 2.0;
 //Money Notes if we do them          
-             var notes = new Array(5);
+            var notes = new Array(5);
              notes[0] = 5.0;
              notes[1] = 10.0;
              notes[2] = 20.0;
              notes[3] = 50.0;
              notes[4] = 100.0;
 //Money Functions
-             function coin_add(money){
+            function coin_add(money){
                 coinsnd.play();
                 var tempvar = wallet += money;   
                 tempvar = wallet.toFixed(2);       
@@ -117,7 +117,7 @@
                 document.getElementById("sold").innerHTML = "";
                 document.getElementById("purchconf").innerHTML = "";
                 }
-             function note_add(money){
+            function note_add(money){
                 notesnd.play();
                 var tempvar = wallet += money;   
                 tempvar = wallet.toFixed(2);       
@@ -126,7 +126,7 @@
                 document.getElementById("sold").innerHTML = "";
                 document.getElementById("purchconf").innerHTML = "";
                 }
-             function change(){
+            function change(){
                 if(wallet>0){
                   var money1 = wallet;
                   alert ("Your change is $" + money1);
@@ -142,11 +142,8 @@
                 }
                  
                 }
-            function confirm(product){
-                document.getElementById("purchconf").innerHTML= "<form><button id='true' onClick='confirm2(t, product)'>Confirm</button> <br> <button id='false' onClick='f'>Cancel</button></form>";
-            }
-            function confirm2(tf, product){
-
+            function confirm(){
+                document.getElementById("purchconf").innerHTML= "<form><input type='button' value='Confirm' onClick='pay_coke(1)'>  <input type='button' value='Cancel' onClick='pay_coke(0)'></form>"
             }
    //Admin Panel
             function refill(){
@@ -186,15 +183,15 @@
              function closeNav() {
                 document.getElementById("myNav").style.width = "0%";
                 }
-             function pay_coke(){
+             function pay_coke(r){
                 if(stock[0] > 0){
                     if(wallet>4.45){
-                        var r = confirm("Confirming payment of $4.45")
-                            if (r == true) {
+                         confirm();
+                            if (r == 1) {
                                  document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
                                     var tempvar = wallet -= 4.45;
                                     wallet = wallet.toFixed(2);
-                              walletempvar = tempvar.toFixed(2);
+                                    walletempvar = tempvar.toFixed(2);
                                     sold[0] += 1;
                                     stock[0] -= 1;
                                     bottlesnd.play();
@@ -314,8 +311,8 @@
         </div>
          <table style="width:100%">
            <tr>
-               <td><img src="Coke.png" alt="coke" style="width:100px;height:250px;" onClick="confirm()"></td>
-               <td><img src="Fanta.png" alt="fanta" style="width:100px;height:250px;" onClick="confirm()"></td>        
+               <td><img src="Coke.png" alt="coke" style="width:100px;height:250px;" onClick="pay_coke()"></td>
+               <td><img src="Fanta.png" alt="fanta" style="width:100px;height:250px;" onClick="pay_fanta()"></td>        
                <td>
                   <p id="money"></p>
                   <p id="sold"></p>
@@ -324,8 +321,8 @@
                </td>
            </tr>
            <tr>
-               <td><img src="Pepsi.png" alt="pepsi" style="width:100px;height:250px;" onClick="confirm()"></td>
-               <td><img src="Solo.png" alt="solo" style="width:100px;height:250px;" onClick="confirm()"></td>       
+               <td><img src="Pepsi.png" alt="pepsi" style="width:100px;height:250px;" onClick="pay_pepsi()"></td>
+               <td><img src="Solo.png" alt="solo" style="width:100px;height:250px;" onClick="pay_solo()"></td>       
                <td>
                  <form>
                     <input type="button" value="Change" onClick="change()">
