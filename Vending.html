@@ -63,6 +63,10 @@
     h1 {
         color:lime;
 }
+    span {
+        color:lime;
+        font-size: 2%;
+}
     </style>
     <head>
        <meta charset="utf-8"/>
@@ -81,6 +85,11 @@
              stock[2] = 8;
              //solo stock
              stock[3] = 8;
+             //doritos stock
+             stock[4] = 8;
+             //Lambo stock
+             stock[5] = 1;
+             
              
 //Sold
              var sold = new Array();
@@ -92,6 +101,10 @@
              sold[2] = 0;
              //Solo
              sold[3] = 0;
+             //Doritos
+             sold[4] = 0;
+             //Lambo
+             sold[5] = 0;
 //coins 5c - $2
              var coins = new Array(6);
              coins[0] = 0.05;
@@ -148,14 +161,15 @@
                 stock[1] = 8;
                 stock[2] = 8;
                 stock[3] = 8;
-                
-                document.getElementById("purchconf").innerHTML = "Coke left: " +stock[0] + "<br> Pepsi left: " + stock[1] + "<br> Fanta left: " + stock[2] + "<br> Solo left: " + stock[3];
+                stock[4] = 8;
+                stock[5] = 1;
+                document.getElementById("purchconf").innerHTML = "Coke left: " +stock[0] + "<br> Pepsi left: " + stock[1] + "<br> Fanta left: " + stock[2] + "<br> Solo left: " + stock[3] + "<br> Doritos left: " + stock [4] + "<br> Lambos left: " + stock[5];
             }
             function Admin(x) {
                 if(x.pass.value == "pass"){
                     document.getElementById("money").innerHTML = "Welcome Admin!";
-                    document.getElementById("sold").innerHTML = "Amount of Cokes sold since last stock: " + sold[0] + "<br>Amount of Pepsi sold since last stock: " + sold[1] + "<br>Amount of Fanta sold since last stock: " + sold[2] + "<br>Amount of Solo sold since last stock: " + sold[3];
-                    document.getElementById("purchconf").innerHTML = "Coke left: " +stock[0] + "<br> Pepsi left: " + stock[1] + "<br> Fanta left: " + stock[2] + "<br> Solo left: " + stock[3];
+                    document.getElementById("sold").innerHTML = "Amount of Cokes sold since last stock: " + sold[0] + "<br>Amount of Pepsi sold since last stock: " + sold[1] + "<br>Amount of Fanta sold since last stock: " + sold[2] + "<br>Amount of Solo sold since last stock: " + sold[3] + "<br>Amount of Doritos sold since last stock: " + sold[4] + "<br>Amount of Lamborghinis sold since last stock: " + sold[5];
+                    document.getElementById("purchconf").innerHTML = "Coke left: " +stock[0] + "<br> Pepsi left: " + stock[1] + "<br> Fanta left: " + stock[2] + "<br> Solo left: " + stock[3] + "<br> Doritos left: " + stock[4] + "<br> Lambos left: " + stock[5]; 
                    document.getElementById("npurch").innerHTML = "<button onClick='readrst()'>Return</button><button onClick='refill()'>Fill Stock</button>";
                     document.getElementById("admin").reset();
                 }
@@ -284,6 +298,58 @@
                         document.getElementById("purchconf").innerHTML = "Our stock of Solo is actually out at the moment, contact the admin to get more stock in."
                     }
              }
+             function pay_doritos(){
+                if(stock[4] > 0){
+                    if(wallet>3.60){
+                        var r = confirm("Confirming payment of $3.60")
+                            if (r == true) {
+                                 document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
+                                    var tempvar = wallet -= 3.60;
+                                    wallet = wallet.toFixed(2);
+                              walletempvar = tempvar.toFixed(2);
+                                    sold[4] += 1;
+                                    stock[4] -= 1;
+                //add chip packet sound
+                                }
+                                else{
+                                    document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
+                                } 
+                            document.getElementById("money").innerHTML = "Balance: $" + wallet
+                        }
+                        else{
+                            document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
+                        }
+                    }
+                    else{
+                        document.getElementById("purchconf").innerHTML = "Our stock of Doritos is actually out at the moment, contact the admin to get more stock in."
+                    }
+             }
+              function pay_lamborghini(){
+                if(stock[5] > 0){
+                    if(wallet>999.99){
+                        var r = confirm("Confirming payment of $1000")
+                            if (r == true) {
+                                 document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
+                                    var tempvar = wallet -= 1000.00;
+                                    wallet = wallet.toFixed(2);
+                              walletempvar = tempvar.toFixed(2);
+                                    sold[5] += 1;
+                                    stock[5] -= 1;
+                //add lambo sound
+                                }
+                                else{
+                                    document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
+                                } 
+                            document.getElementById("money").innerHTML = "Balance: $" + wallet
+                        }
+                        else{
+                            document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
+                        }
+                    }
+                    else{
+                        document.getElementById("purchconf").innerHTML = "Our stock of Lamborghinis are actually out at the moment, contact the admin to get more stock in."
+                    }
+            }
          </script>
     </head>
     <h1>Team Vending Machine</h1>
@@ -308,8 +374,8 @@
         </div>
          <table style="width:100%">
            <tr>
-               <td><img src="Coke.png" alt="coke" style="width:100px;height:250px;" onClick="pay_coke()"></td>
-               <td><img src="Fanta.png" alt="fanta" style="width:100px;height:250px;" onClick="pay_fanta()"></td>        
+               <td><p>$4.45</p><img src="Coke.png" alt="coke" style="width:50px;height:125px;" onClick="pay_coke()"></td>
+               <td><p>$4.25</p><img src="Fanta.png" alt="fanta" style="width:50px;height:125px;" onClick="pay_fanta()"></td>        
                <td>
                   <p id="money"></p>
                   <p id="sold"></p>
@@ -319,8 +385,8 @@
                </td>
            </tr>
            <tr>
-               <td><img src="Pepsi.png" alt="pepsi" style="width:100px;height:250px;"onClick="pay_pepsi()"></td>
-               <td><img src="Solo.png" alt="solo" style="width:100px;height:250px;"onClick="pay_solo()"></td>       
+               <td><p>$4.95</p><img src="Pepsi.png" alt="pepsi" style="width:50px;height:125px;"onClick="pay_pepsi()"></td>
+               <td><p>$4.15</p><img src="Solo.png" alt="solo" style="width:50px;height:125px;"onClick="pay_solo()"></td>       
                <td>
                  <form>
                     <input type="button" value="Change" onClick="change()">
@@ -328,8 +394,8 @@
                </td>
            </tr>
            <tr>
-               <td></td>
-               <td></td>       
+               <td><p>$3.60</p><img src="Doritos.png" alt="doritos" style="width:87.5px;height:125px;"onClick="pay_doritos()"></td>
+               <td><p>$1000</p><img src="lamborghini.jpg" alt="lamborghini" style="width:150px;height:87.5px;"onClick="pay_lamborghini()"></td>       
                <td>
                   <form id=admin>
                     <p>Password:<input type="password" name="pass"></p>
@@ -341,8 +407,7 @@
 
                         <center>
 
-                            <span style="font-size:30px;cursor:pointer" onclick="openNav()">Wallet</span>
-                                <p>
+                            <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="Wallet.png" alt="Wallet" style="width:150px;height:125px;"></span>
                         </center>
     </body>
 </html>
