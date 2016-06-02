@@ -74,7 +74,9 @@
              <script>
              var coinsnd = new Audio("short_coin_drop.ogg");
              var bottlesnd = new Audio("bottle drop.ogg");
-             var notesnd = new Audio("insert note.ogg")
+             var notesnd = new Audio("insert note.ogg");
+			 var lambosnd = new Audio("lambo.ogg");
+			 var chippacketsnd = new Audio("chip packet.ogg");
              var wallet = 0;
              var stock = new Array();
              //coke stock
@@ -89,6 +91,8 @@
              stock[4] = 8;
              //Lambo stock
              stock[5] = 1;
+             //Mountain Dew Stock
+             stock[6] = 8;
              
              
 //Sold
@@ -105,6 +109,8 @@
              sold[4] = 0;
              //Lambo
              sold[5] = 0;
+             //Mountain Dew
+             sold[6] = 0;
 //coins 5c - $2
              var coins = new Array(6);
              coins[0] = 0.05;
@@ -142,7 +148,7 @@
              function change(){
                 if(wallet>0){
                   var money1 = wallet;
-                  alert("Your change is $" + money1);
+                  alert ("Your change is $" + money1);
                   wallet = 0;
                   document.getElementById("money").innerHTML = "Welcome, Please insert some money to continue.";
                   document.getElementById("sold").innerHTML = "";
@@ -163,13 +169,14 @@
                 stock[3] = 8;
                 stock[4] = 8;
                 stock[5] = 1;
-                document.getElementById("purchconf").innerHTML = "Coke left: " +stock[0] + "<br> Pepsi left: " + stock[1] + "<br> Fanta left: " + stock[2] + "<br> Solo left: " + stock[3] + "<br> Doritos left: " + stock [4] + "<br> Lambos left: " + stock[5];
+                stock[6] = 8;
+                document.getElementById("purchconf").innerHTML = "Coke left: " +stock[0] + "<br> Pepsi left: " + stock[1] + "<br> Fanta left: " + stock[2] + "<br> Solo left: " + stock[3] + "<br> Doritos left: " + stock [4] + "<br> Lambos left: " + stock[5] + "<br> Mountain dew left: " + stock[6];
             }
             function Admin(x) {
                 if(x.pass.value == "pass"){
                     document.getElementById("money").innerHTML = "Welcome Admin!";
-                    document.getElementById("sold").innerHTML = "Amount of Cokes sold since last stock: " + sold[0] + "<br>Amount of Pepsi sold since last stock: " + sold[1] + "<br>Amount of Fanta sold since last stock: " + sold[2] + "<br>Amount of Solo sold since last stock: " + sold[3] + "<br>Amount of Doritos sold since last stock: " + sold[4] + "<br>Amount of Lamborghinis sold since last stock: " + sold[5];
-                    document.getElementById("purchconf").innerHTML = "Coke left: " +stock[0] + "<br> Pepsi left: " + stock[1] + "<br> Fanta left: " + stock[2] + "<br> Solo left: " + stock[3] + "<br> Doritos left: " + stock[4] + "<br> Lambos left: " + stock[5]; 
+                    document.getElementById("sold").innerHTML = "Amount of Cokes sold since last stock: " + sold[0] + "<br>Amount of Pepsi sold since last stock: " + sold[1] + "<br>Amount of Fanta sold since last stock: " + sold[2] + "<br>Amount of Solo sold since last stock: " + sold[3] + "<br>Amount of Doritos sold since last stock: " + sold[4] + "<br>Amount of Lamborghinis sold since last stock: " + sold[5] + "<br>Amount of Mountain dew left: " + sold[6];
+                    document.getElementById("purchconf").innerHTML = "Coke left: " +stock[0] + "<br> Pepsi left: " + stock[1] + "<br> Fanta left: " + stock[2] + "<br> Solo left: " + stock[3] + "<br> Doritos left: " + stock[4] + "<br> Lambos left: " + stock[5] + "<br> Mountain Dew left: " + stock[6]; 
                    document.getElementById("npurch").innerHTML = "<button onClick='readrst()'>Return</button><button onClick='refill()'>Fill Stock</button>";
                     document.getElementById("admin").reset();
                 }
@@ -309,7 +316,7 @@
                               walletempvar = tempvar.toFixed(2);
                                     sold[4] += 1;
                                     stock[4] -= 1;
-                //add chip packet sound
+									chippacketsnd.play();
                                 }
                                 else{
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
@@ -335,7 +342,7 @@
                               walletempvar = tempvar.toFixed(2);
                                     sold[5] += 1;
                                     stock[5] -= 1;
-                //add lambo sound
+									lambosnd.play();
                                 }
                                 else{
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
@@ -348,6 +355,32 @@
                     }
                     else{
                         document.getElementById("purchconf").innerHTML = "Our stock of Lamborghinis are actually out at the moment, contact the admin to get more stock in."
+                    }
+            }
+            function pay_dew(){
+                if(stock[6] > 0){
+                    if(wallet>4.20){
+                        var r = confirm("Confirming payment of $4.20")
+                            if (r == true) {
+                                 document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
+                                    var tempvar = wallet -= 4.20;
+                                    wallet = wallet.toFixed(2);
+                              walletempvar = tempvar.toFixed(2);
+                                    sold[6] += 1;
+                                    stock[6] -= 1;
+									bottlesnd.play();
+                                }
+                                else{
+                                    document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
+                                } 
+                            document.getElementById("money").innerHTML = "Balance: $" + wallet
+                        }
+                        else{
+                            document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
+                        }
+                    }
+                    else{
+                        document.getElementById("purchconf").innerHTML = "Our stock of Mountain Dew are actually out at the moment, contact the admin to get more stock in."
                     }
             }
          </script>
@@ -403,6 +436,8 @@
                   </form>
                </td>
            </tr>
+           <tr>
+               <td><p>$4.20</p><img src="Mountaindew.jpg" alt="dew" style="width:50px;height:125px;"onClick="pay_dew()"></td>
        </table>
 
                         <center>
