@@ -70,7 +70,7 @@
              <script>
             var coinsnd = new Audio("short_coin_drop.ogg");
             var bottlesnd = new Audio("bottle drop.ogg");
-            var notesnd = new Audio("insert note.ogg")
+            var notesnd = new Audio("insert note.ogg");
             var wallet = 0;
             var stock = new Array();
              //coke stock
@@ -142,9 +142,28 @@
                 }
                  
                 }
-            function confirm(){
-                document.getElementById("purchconf").innerHTML= "<form><input type='button' value='Confirm' onClick='pay_coke(1)'>  <input type='button' value='Cancel' onClick='pay_coke(0)'></form>"
-            }
+//Confirm Function
+            function confirm(g, y){
+				document.getElementById("sold").innerHTML = "Confirming your purchase:";
+                document.getElementById("purchconf").innerHTML= "<form><input type='button' value='Confirm' onClick='x = 1'>  <input type='button' value='Cancel' onClick='x = 0'></form>";
+				if (g = 1){
+					if (y = 1){
+						pay_coke();
+					}
+					else if (y = 2){
+						pay_pepsi();
+					}
+					else if (y = 3){
+						pay_fanta();
+					}
+					else if (y = 4){
+						pay_solo();
+					}
+				}
+				else {
+					document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
+				}
+			}
    //Admin Panel
             function refill(){
                 stock[0] = 8;
@@ -183,23 +202,18 @@
              function closeNav() {
                 document.getElementById("myNav").style.width = "0%";
                 }
-             function pay_coke(r){
+//Pay Functions
+             function pay_coke(){
                 if(stock[0] > 0){
                     if(wallet>4.45){
-                         confirm();
-                            if (r == 1) {
-                                 document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
+									document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
                                     var tempvar = wallet -= 4.45;
                                     wallet = wallet.toFixed(2);
                                     walletempvar = tempvar.toFixed(2);
                                     sold[0] += 1;
                                     stock[0] -= 1;
                                     bottlesnd.play();
-                                }
-                                else{
-                                    document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
-                                } 
-                            document.getElementById("money").innerHTML = "Balance: $" + wallet
+									document.getElementById("money").innerHTML = "Balance: $" + wallet;
                         }
                         else{
                             document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
@@ -212,19 +226,13 @@
              function pay_pepsi(){
                 if(stock[1] > 0){
                     if(wallet>4.95){
-                        var r = confirm("Confirming payment of $4.95");
-                            if (r == true) {
                                 alert("Thank you for your purchase!");
                                     var tempvar = wallet -= 4.95;
                                     tempvar = wallet.toFixed(2);
                                     sold[1] += 1;
                                     stock[1] -= 1;
                                     bottlesnd.play();
-                                }
-                                else{
-                                    document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
-                                } 
-                                document.getElementById("money").innerHTML = "Balance: $" + wallet
+									document.getElementById("money").innerHTML = "Balance: $" + wallet;
                         }
                         else{
                             document.getElementById("purchconf").innerHTML="You haven't got the balance to make that purchase my friend...";
@@ -238,34 +246,26 @@
              function pay_fanta(){
                 if(stock[2] > 0){
                     if(wallet>4.25){
-                        var r = confirm("Confirming payment of $4.25")
-                            if (r == true) {
                                  document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
                                     var tempvar = wallet -= 4.25;
                                     wallet = wallet.toFixed(2);
                               walletempvar = tempvar.toFixed(2);
                                     sold[2] += 1;
                                     stock[2] -= 1;
-                                    bottlesnd.play();
-                                }
-                                else{
-                                    document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
-                                } 
-                            document.getElementById("money").innerHTML = "Balance: $" + wallet
+                                    bottlesnd.play(); 
+									document.getElementById("money").innerHTML = "Balance: $" + wallet;
                         }
                         else{
                             document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
                         }
                     }
                     else{
-                        document.getElementById("purchconf").innerHTML = "Our stock of Fanta is actually out at the moment, contact the admin to get more stock in."
+                        document.getElementById("purchconf").innerHTML = "Our stock of Fanta is actually out at the moment, contact the admin to get more stock in.";
                     }
-             }
+					}
              function pay_solo(){
                 if(stock[3] > 0){
-                    if(wallet>4.15){
-                        var r = confirm("Confirming payment of $4.15")
-                            if (r == true) {
+                    if(wallet>4.15){                     
                                  document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
                                     var tempvar = wallet -= 4.15;
                                     wallet = wallet.toFixed(2);
@@ -273,18 +273,14 @@
                                     sold[3] += 1;
                                     stock[3] -= 1;
                                     bottlesnd.play();
-                                }
-                                else{
-                                    document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
-                                } 
-                            document.getElementById("money").innerHTML = "Balance: $" + wallet
-                        }
-                        else{
-                            document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
-                        }
+									document.getElementById("money").innerHTML = "Balance: $" + wallet;
+									}
+							else{
+								document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
+							}
                     }
                     else{
-                        document.getElementById("purchconf").innerHTML = "Our stock of Solo is actually out at the moment, contact the admin to get more stock in."
+                        document.getElementById("purchconf").innerHTML = "Our stock of Solo is actually out at the moment, contact the admin to get more stock in.";
                     }
              }
          </script>
@@ -311,8 +307,8 @@
         </div>
          <table style="width:100%">
            <tr>
-               <td><img src="Coke.png" alt="coke" style="width:100px;height:250px;" onClick="pay_coke()"></td>
-               <td><img src="Fanta.png" alt="fanta" style="width:100px;height:250px;" onClick="pay_fanta()"></td>        
+               <td><img src="Coke.png" alt="coke" style="width:100px;height:250px;" onClick="confirm(0, 1)"></td>
+               <td><img src="Fanta.png" alt="fanta" style="width:100px;height:250px;" onClick="confirm(0, 2)"></td>        
                <td>
                   <p id="money"></p>
                   <p id="sold"></p>
@@ -321,8 +317,8 @@
                </td>
            </tr>
            <tr>
-               <td><img src="Pepsi.png" alt="pepsi" style="width:100px;height:250px;" onClick="pay_pepsi()"></td>
-               <td><img src="Solo.png" alt="solo" style="width:100px;height:250px;" onClick="pay_solo()"></td>       
+               <td><img src="Pepsi.png" alt="pepsi" style="width:100px;height:250px;" onClick="confirm(0, 3)"></td>
+               <td><img src="Solo.png" alt="solo" style="width:100px;height:250px;" onClick="confirm(0, 4)"></td>       
                <td>
                  <form>
                     <input type="button" value="Change" onClick="change()">
