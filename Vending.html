@@ -130,18 +130,18 @@
              function coin_add(money){
                 coinsnd.play();
                 var tempvar = wallet += money;   
-                tempvar = wallet.toFixed(2);       
-                document.getElementById("money").innerHTML = "Balance: $" + tempvar;
-                document.getElementById("overmoney").innerHTML= "Balance: $" + tempvar;
+                var n = wallet.toFixed(2);       
+                document.getElementById("money").innerHTML = "Balance: $" + n;
+                document.getElementById("overmoney").innerHTML= "Balance: $" + wallet;
                 document.getElementById("sold").innerHTML = "";
                 document.getElementById("purchconf").innerHTML = "";
                 }
              function note_add(money){
                 notesnd.play();
                 var tempvar = wallet += money;   
-                tempvar = wallet.toFixed(2);       
-                document.getElementById("money").innerHTML = "Balance: $" + tempvar;
-                document.getElementById("overmoney").innerHTML= "Balance: $" + tempvar;
+                var n = wallet.toFixed(2);       
+                document.getElementById("money").innerHTML = "Balance: $" + n;
+                document.getElementById("overmoney").innerHTML= "Balance: $" + wallet;
                 document.getElementById("sold").innerHTML = "";
                 document.getElementById("purchconf").innerHTML = "";
                 }
@@ -208,8 +208,7 @@
                             if (r == true) {
                                  document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
                                     var tempvar = wallet -= 4.45;
-                                    wallet = wallet.toFixed(2);
-                              walletempvar = tempvar.toFixed(2);
+                                    var n = wallet.toFixed(2);
                                     sold[0] += 1;
                                     stock[0] -= 1;
                                     bottlesnd.play();
@@ -217,7 +216,7 @@
                                 else{
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
                                 } 
-                            document.getElementById("money").innerHTML = "Balance: $" + wallet
+                            document.getElementById("money").innerHTML = "Balance: $" + n
                         }
                         else{
                             document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
@@ -234,7 +233,7 @@
                             if (r == true) {
                                 alert("Thank you for your purchase!");
                                     var tempvar = wallet -= 4.95;
-                                    tempvar = wallet.toFixed(2);
+                                    var n = wallet.toFixed(2);
                                     sold[1] += 1;
                                     stock[1] -= 1;
                                     bottlesnd.play();
@@ -242,7 +241,7 @@
                                 else{
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
                                 } 
-                                document.getElementById("money").innerHTML = "Balance: $" + wallet
+                                document.getElementById("money").innerHTML = "Balance: $" + n
                         }
                         else{
                             document.getElementById("purchconf").innerHTML="You haven't got the balance to make that purchase my friend...";
@@ -260,8 +259,7 @@
                             if (r == true) {
                                  document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
                                     var tempvar = wallet -= 4.25;
-                                    wallet = wallet.toFixed(2);
-                              walletempvar = tempvar.toFixed(2);
+                                    var n = wallet.toFixed(2);
                                     sold[2] += 1;
                                     stock[2] -= 1;
                                     bottlesnd.play();
@@ -269,7 +267,7 @@
                                 else{
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
                                 } 
-                            document.getElementById("money").innerHTML = "Balance: $" + wallet
+                            document.getElementById("money").innerHTML = "Balance: $" + n
                         }
                         else{
                             document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
@@ -286,8 +284,7 @@
                             if (r == true) {
                                  document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
                                     var tempvar = wallet -= 4.15;
-                                    wallet = wallet.toFixed(2);
-                              walletempvar = tempvar.toFixed(2);
+                                    var n = wallet.toFixed(2);
                                     sold[3] += 1;
                                     stock[3] -= 1;
                                     bottlesnd.play();
@@ -295,7 +292,7 @@
                                 else{
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
                                 } 
-                            document.getElementById("money").innerHTML = "Balance: $" + wallet
+                            document.getElementById("money").innerHTML = "Balance: $" + n
                         }
                         else{
                             document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
@@ -312,8 +309,7 @@
                             if (r == true) {
                                  document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
                                     var tempvar = wallet -= 3.60;
-                                    wallet = wallet.toFixed(2);
-                              walletempvar = tempvar.toFixed(2);
+                                    var n = wallet.toFixed(2);
                                     sold[4] += 1;
                                     stock[4] -= 1;
 									chippacketsnd.play();
@@ -321,7 +317,7 @@
                                 else{
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
                                 } 
-                            document.getElementById("money").innerHTML = "Balance: $" + wallet
+                            document.getElementById("money").innerHTML = "Balance: $" + n
                         }
                         else{
                             document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
@@ -338,8 +334,7 @@
                             if (r == true) {
                                  document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
                                     var tempvar = wallet -= 1000.00;
-                                    wallet = wallet.toFixed(2);
-                              walletempvar = tempvar.toFixed(2);
+                                    var n = wallet.toFixed(2);
                                     sold[5] += 1;
                                     stock[5] -= 1;
 									lambosnd.play();
@@ -347,7 +342,7 @@
                                 else{
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
                                 } 
-                            document.getElementById("money").innerHTML = "Balance: $" + wallet
+                            document.getElementById("money").innerHTML = "Balance: $" + n
                         }
                         else{
                             document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
@@ -364,8 +359,7 @@
                             if (r == true) {
                                  document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
                                     var tempvar = wallet -= 4.20;
-                                    wallet = wallet.toFixed(2);
-                              walletempvar = tempvar.toFixed(2);
+                                    var n = wallet.toFixed(2);
                                     sold[6] += 1;
                                     stock[6] -= 1;
 									bottlesnd.play();
@@ -373,7 +367,7 @@
                                 else{
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
                                 } 
-                            document.getElementById("money").innerHTML = "Balance: $" + wallet
+                            document.getElementById("money").innerHTML = "Balance: $" + n
                         }
                         else{
                             document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
