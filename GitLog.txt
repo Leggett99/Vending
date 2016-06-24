@@ -1,0 +1,1027 @@
+commit bd09d646e1e40b53d9c0499d0a981a1ec5885998
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Mon Jun 6 20:38:36 2016 +1000
+
+    Update
+    
+    Update
+
+commit a7ead5bb3011506ed23bc6b7ff7f1b69e21e2b20
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Mon Jun 6 20:29:50 2016 +1000
+
+    Big Changes
+
+commit bdbe7ffe6eb8f181067f01c59869c35304377dc5
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Sun Jun 5 21:30:25 2016 +1000
+
+    Fix
+    
+    Fixed the error, now you can add money after you make a purchase as well
+    as beforehand
+
+commit 50aadd1e6d758ef7db60e6109aa7cd1b2cde95de
+Merge: 321faf8 55a42b3
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Fri Jun 3 13:03:04 2016 +1000
+
+    Merge pull request #46 from Leggett99/master
+    
+    sync
+
+commit 55a42b3b15819a9761ecb34b016f368115348d21
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Fri Jun 3 13:01:53 2016 +1000
+
+    Overwork of the Confirm Function
+
+commit 7a7b147779657827953e7b33eee47ae7c2a299cd
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Thu Jun 2 18:33:57 2016 +1000
+
+    Sound effects
+    
+    Added sound effect for lambo and doritos
+
+commit 9de3884c3795b8b07e766b386b99ab6d4bca7e1b
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Thu Jun 2 18:10:56 2016 +1000
+
+    Edited mountain dew
+
+commit f0bced7f544d3e4b8e16d111e455cb9ed2133f59
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Thu Jun 2 14:14:27 2016 +1000
+
+    Add files via upload
+
+commit 2bb00e842ec1a6401d7ec528a06cac25b026471b
+Merge: 76813a9 321faf8
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Sun May 29 14:31:29 2016 +1000
+
+    Merge pull request #44 from Leggett99/Leggett
+    
+    Leggett
+
+commit 321faf8d0810783390a5c951986036a932375297
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Sun May 29 14:30:44 2016 +1000
+
+    fun
+
+commit 9023797de6e9536e4f15b98884ce2e6f85c9bb6e
+Merge: 71d3284 2c0ae4f
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Sun May 29 14:30:34 2016 +1000
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into Leggett
+
+commit 76813a9258488eeba13383e59837a4400de405b5
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Sun May 29 12:41:56 2016 +1000
+
+    Latest Version (FULLY WORKING)
+    
+    Collab edit version update with updated wallet.png and lamborghini is
+    purchaseable
+
+commit ac0dbd9b66a1be3b4c8d6eb06cd267c699fec90e
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Sun May 29 11:53:42 2016 +1000
+
+    Add files via upload
+
+commit 68aad6e75a4100ec49a3d32d156405ec1a1491d3
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Fri May 27 12:06:36 2016 +1000
+
+    Add files via upload
+
+commit 2c0ae4fae08a2e7d06c4fa972e22447f6fe23c43
+Merge: 1b11fe8 71d3284
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Tue May 24 18:41:22 2016 +1000
+
+    Merge pull request #42 from Leggett99/Leggett
+    
+    Leggett
+
+commit 71d32846cd6e2704bb1f7d5a57fbc5746359745d
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Tue May 24 18:40:56 2016 +1000
+
+    Experimental
+    
+    An experimental version of the file, it is very broken
+
+commit 642764fe9086704da4cbdf2e8a173bb0dc6cecae
+Merge: c731b9c 1b11fe8
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Tue May 24 17:02:18 2016 +1000
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into Leggett
+
+commit c731b9c71d582ebd7ccc21be5c8c20fca0051652
+Merge: 57ff1c5 fa81e4d
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Mon May 23 20:25:27 2016 +1000
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into Leggett
+
+commit 1b11fe8f723084ab7ec58c8a957a3d4a15c13cfd
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Fri May 20 11:46:51 2016 +1000
+
+    Add files via upload
+
+commit fa81e4dbbdaac87e9f368ef4f629fb210ebea4b6
+Merge: 08b7b10 5fe230c
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Thu May 19 20:41:49 2016 +1000
+
+    Merge pull request #41 from Leggett99/kumanatorbranch
+    
+    Merge pull request #35 from Leggett99/master
+
+commit 08b7b10c86cab357d76ddd147186d55d7965964a
+Merge: b6c40e2 57ff1c5
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Thu May 19 20:41:15 2016 +1000
+
+    Merge pull request #40 from Leggett99/Leggett
+    
+    Leggett
+
+commit b6c40e233d47900addaa2178409d964f3042f75e
+Merge: cd82323 52c4dfa
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Thu May 19 20:40:27 2016 +1000
+
+    Merge pull request #39 from Leggett99/Leggett
+    
+    Note Sound and new function
+
+commit 57ff1c53ac6cd45729e00123fdbb27ef74ae9fc5
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Thu May 19 20:40:16 2016 +1000
+
+    This one Works
+
+commit 52c4dfa19b1ac09f39c44ed96b0346d488d17c3c
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Thu May 19 20:35:53 2016 +1000
+
+    Note Sound and new function
+
+commit cd82323e72f0e449def56fef655b4675c7f912e7
+Merge: 3286e06 044a7a7
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Thu May 19 20:31:08 2016 +1000
+
+    Merge pull request #38 from Leggett99/Leggett
+    
+    Sound Effects!!
+
+commit 044a7a73d3f0ca8c54a040407156c4b9248a2c05
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Thu May 19 20:30:43 2016 +1000
+
+    Sound Effects!!
+
+commit 3286e06fcb5c6018a09711aeea7aa92d5c92feb0
+Merge: 3a29783 90a65c2
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Thu May 19 20:00:38 2016 +1000
+
+    Merge pull request #37 from Leggett99/Leggett
+    
+    Sounds
+
+commit 90a65c27a6c433eeccefd3c7690073b3a0b3f0f6
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Thu May 19 20:00:15 2016 +1000
+
+    Sounds
+
+commit 3a297837e4bac68ebc71e9c704f90f85dbdd2b3c
+Merge: 639814d 487e580
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Thu May 19 19:39:06 2016 +1000
+
+    Merge pull request #36 from Leggett99/Leggett
+    
+    Leggett
+
+commit 487e5800617d8c61678497a9e9554fa96f58210d
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Thu May 19 19:38:35 2016 +1000
+
+    update
+
+commit 4fee7e13fe5341a3e577349d7c61c58c03c33e49
+Merge: 60b0675 639814d
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Thu May 19 19:38:05 2016 +1000
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into Leggett
+
+commit 5fe230cabcc7ff0ab3c7974288f3545d30ac08b8
+Merge: 6fb7d7a 639814d
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Thu May 19 18:13:56 2016 +1000
+
+    Merge pull request #35 from Leggett99/master
+    
+    fix
+
+commit 639814d3b801d69396874d453120bd6c6bcbc2e8
+Merge: a33c40a 60b0675
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Thu May 19 18:13:21 2016 +1000
+
+    Merge pull request #34 from Leggett99/Leggett
+    
+    Leggett
+
+commit 60b0675c7b19de241cb4d149adf31f7022d7571a
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Thu May 19 18:12:57 2016 +1000
+
+    Changed the way the code works, removed some elements and formatted better.
+
+commit 92c5c39cb4bf39a4d1609d6bcc0499b6c585969b
+Merge: 9ce4281 6ed956f
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Thu May 19 18:05:45 2016 +1000
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into Leggett
+
+commit a33c40acf04d350e226ce1cace61b9fd2f9a96b0
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Thu May 19 18:05:39 2016 +1000
+
+    Add files via upload
+
+commit 9ce428183bc2b335bf08aca3974388bf3fb84bcf
+Merge: 0ba4ff9 67efda0
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Thu May 19 18:00:49 2016 +1000
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into Leggett
+
+commit 6ed956fc29999f86b299cce32fbcd820a66e9235
+Merge: 67efda0 0ba4ff9
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Thu May 19 18:00:27 2016 +1000
+
+    Merge pull request #33 from Leggett99/Leggett
+    
+    Leggett
+
+commit 67efda01bdad45f8872543436cc1da1bd8db5a6e
+Merge: 2197ad3 6fb7d7a
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Thu May 19 17:57:41 2016 +1000
+
+    Merge pull request #32 from Leggett99/kumanatorbranch
+    
+    Merge pull request #31 from Leggett99/master
+
+commit 6fb7d7a60f0da531498b0f9b5305563cc3affc2b
+Merge: e87c181 2197ad3
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Thu May 19 17:56:22 2016 +1000
+
+    Merge pull request #31 from Leggett99/master
+    
+    fix
+
+commit 2197ad35403d9f2ec3e1485feb27b25f5795e9b1
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Thu May 19 13:54:38 2016 +1000
+
+    Add files via upload
+
+commit 4a22ebe947df0fe7fea46270a5c73a98190c31a7
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Thu May 19 13:44:27 2016 +1000
+
+    Add files via upload
+
+commit 97268de95ec463f99d559568b5d2395ae26831da
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Wed May 18 18:06:54 2016 +1000
+
+    MONEY NOTES!!
+    
+    Added 5, 10, 20, 50, and 100 dollars which function properly
+
+commit 0ba4ff9377baeeb27c5a33b1f74eccab6d994436
+Merge: 60334e2 c591b3c
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Wed May 18 17:20:27 2016 +1000
+
+    Merge branch 'Leggett' of https://github.com/Leggett99/Vending into Leggett
+
+commit 60334e2eaaec13a41097f410c51364f7cb441159
+Merge: 7c65f53 3ef5e1e
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Wed May 18 17:20:19 2016 +1000
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into Leggett
+
+commit f0676d1ce6f00f5583da069d0df1a0d0b52cbe48
+Merge: 9947ee1 e87c181
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Wed May 18 11:53:47 2016 +1000
+
+    Merge pull request #30 from Leggett99/kumanatorbranch
+    
+    Kumanatorbranch
+
+commit 9947ee118b83c528ad29c7286bbd05d4bf69c18d
+Merge: 0a9eab2 c591b3c
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Wed May 18 11:51:47 2016 +1000
+
+    Merge pull request #29 from Leggett99/Leggett
+    
+    Leggett
+
+commit e87c18104645c1bc872e23879b3ab7e850bd4412
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Wed May 18 11:49:12 2016 +1000
+
+    Update Vending.html
+
+commit 0a9eab20ec29f0c246d3a86c294a690d78d044e3
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Wed May 18 11:48:15 2016 +1000
+
+    Update Vending.html
+
+commit c591b3c48c993b4bd0aaad90f26e88c8618b24fa
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Wed May 18 11:27:26 2016 +1000
+
+    Update Vending.html
+
+commit 954f1e880bed5f926a0a7aec1f9b5edb7215c14a
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Tue May 17 08:39:27 2016 +1000
+
+    Update Vending.html
+
+commit 7461469fdc40b2100b4a2c8375b0344c2435d50b
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Mon May 16 21:56:26 2016 +1000
+
+    Fanta
+    
+    Fanta is now available for purchase
+
+commit caab4158bdddc6d20be3215996d73141456e8617
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Mon May 16 21:55:49 2016 +1000
+
+    Fanta Purchase
+    
+    Fanta is now available for purchase
+
+commit f900174e291a853b328ae6ef521f60e17f6ea78e
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Mon May 16 20:06:42 2016 +1000
+
+    Update Vending.html
+
+commit aab249dd9f2dae6b86cc4df509c086a8849b57a5
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Mon May 16 20:05:29 2016 +1000
+
+    Update Vending.html
+
+commit 7c65f53b580f9a24441ab42edbbc85663fcaf591
+Merge: 94d247a cb94460
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Mon May 16 20:03:59 2016 +1000
+
+    Merge pull request #27 from Leggett99/kumanatorbranch
+    
+    Merge remote-tracking branch 'refs/remotes/origin/master' into kumanaÔÇª
+
+commit 3ef5e1e628ed71dd5fe299d9c3fd149dcecee4a4
+Merge: f6b2858 cb94460
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Mon May 16 15:17:34 2016 +1000
+
+    Merge pull request #26 from Leggett99/kumanatorbranch
+    
+    idk what im doing
+
+commit cb9446022b682ea7a4593dbc2cd453bb345a7ae9
+Merge: e99fe6b 2fa7863
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Mon May 16 15:15:38 2016 +1000
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into kumanatorbranch
+
+commit f6b285837e710381bbe0739cd13dc4de1f924944
+Merge: 6496465 94d247a
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Sun May 15 07:51:16 2016 +1000
+
+    Merge pull request #25 from Leggett99/Leggett
+    
+    Leggett
+
+commit 94d247abc5b7139288679e8fc2840dafa460c7bf
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Sun May 15 07:50:21 2016 +1000
+
+    Minor Changes
+    
+    Added a few lines of code to make the "readout" panel read better, also
+    added a bit of text
+
+commit 6496465f7988f8d025a64a767d3d03ca63721d54
+Merge: 94a5135 00639c9
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Sat May 14 20:25:54 2016 +1000
+
+    Merge pull request #24 from Leggett99/Leggett
+    
+    Almost Major Changes
+
+commit 00639c9f1faf270e60891b1d188a90c8f4162a4c
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Sat May 14 20:25:19 2016 +1000
+
+    Almost Major Changes
+    
+    Made changes to positioning, also we aren't using as many alert boxes
+    anymore, almost everything is moved across to our "readout" screen, also
+    our "readout" screen is reading better. Made it load with a welcome
+    message, clicking the "change" button resets the page and sets all
+    counters to 0,
+
+commit 94a513535c0c3ab2f4dd9db9723348bb2e029ccd
+Merge: 997ce22 81c25a2
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Sat May 14 19:50:54 2016 +1000
+
+    Merge pull request #23 from Leggett99/Leggett
+    
+    Leggett
+
+commit 81c25a2b19fb56b99edefd6554abbea743a222ea
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Sat May 14 19:49:37 2016 +1000
+
+    Fixed Password Function
+    
+    Simple fix to the admin password function
+
+commit 02d3fe68c12fc506bf80dedfb08c6fe984601deb
+Merge: 51d69c8 dc86b79
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Sat May 14 19:39:30 2016 +1000
+
+    Merge branch 'Leggett' of https://github.com/Leggett99/Vending into Leggett
+
+commit dc86b79b7624f7525ce6772fcf345682c80f807b
+Merge: 2569046 997ce22
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Sat May 14 19:39:24 2016 +1000
+
+    Merge pull request #22 from Leggett99/master
+    
+    Merge
+
+commit 997ce22a6e9f69da756c70a313bc80905ac6fc57
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Fri May 13 09:23:52 2016 +1000
+
+    Update from CollabEdit
+    
+    Includes Kumar's table with moved positions of buttons
+
+commit 51d69c837a0546d3b68c7dc6899fed1437b9e4a9
+Merge: 2569046 2fa7863
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Tue May 10 19:42:43 2016 +1000
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into Leggett
+
+commit 2fa7863bc54ac15e5c12c405044225dceaaf189f
+Merge: 70f3f4b 2569046
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Tue May 10 19:40:48 2016 +1000
+
+    Merge pull request #21 from Leggett99/Leggett
+    
+    Leggett
+
+commit 2569046a31b18da1fe0ba50d32de35c2a0e5c3fa
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Tue May 10 19:39:49 2016 +1000
+
+    Small Changes
+
+commit 2cf4b13d9d287cfd612be490e4ba5385f0e236c5
+Merge: 07d8319 70f3f4b
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Tue May 10 19:37:25 2016 +1000
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into Leggett
+
+commit 70f3f4b5997ebb1b56ef0212e9ab28bf3af793f5
+Merge: f3c4db9 e99fe6b
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Tue May 10 19:35:57 2016 +1000
+
+    Merge pull request #20 from Leggett99/kumanatorbranch
+    
+    Kumanatorbranch
+
+commit e99fe6bcc9209a02fc5a7a9c4072b964fb0e20f7
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Tue May 10 19:34:57 2016 +1000
+
+    Temporary Change
+    
+    removed temp change
+
+commit 649116955abd93b5a52051ad2493b0683a874c9e
+Merge: 8ef6f0e f3c4db9
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Tue May 10 19:33:48 2016 +1000
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into kumanatorbranch
+
+commit 07d8319797fed5aba25835372449096d1e287c79
+Merge: 8d39f80 333ada4
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Tue May 10 19:32:46 2016 +1000
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into Leggett
+
+commit 8ef6f0e5aa250f34bb42487d7bd481d58c6ea1bc
+Merge: 0e74152 ec1337c
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Tue May 10 19:32:40 2016 +1000
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into kumanatorbranch
+
+commit f3c4db96f4485823d03ffbee439619c4653cc45d
+Merge: 333ada4 8d39f80
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Tue May 10 19:32:35 2016 +1000
+
+    Merge pull request #19 from Leggett99/Leggett
+    
+    text
+
+commit 8d39f80ca1048a06874a9e74ee2bd9fdc93097be
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Tue May 10 19:32:03 2016 +1000
+
+    text
+
+commit 333ada45cdc7fc776b32e53fb4d56de0731b3824
+Merge: ec1337c 0e74152
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Tue May 10 19:30:53 2016 +1000
+
+    Merge pull request #18 from Leggett99/kumanatorbranch
+    
+    Kumanatorbranch
+
+commit 0e741521ba64aa9b284d1a850b73e0f6b0cc5fd0
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Tue May 10 19:28:50 2016 +1000
+
+    Title
+    
+    Title changed to "Team Vending Machine"
+
+commit ec1337cdfe2698fbf1cd936f2826b7c1d390c5f3
+Merge: 377a276 d1d51c8
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Tue May 10 19:25:04 2016 +1000
+
+    Merge pull request #17 from Leggett99/Leggett
+    
+    Leggett
+
+commit d1d51c89f8a85c9caa1377a6b6d91ed0c73c081a
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Tue May 10 19:24:25 2016 +1000
+
+    Order Cancel
+
+commit 849d5ec77c2810641ec474a12b6594612dfa2712
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Tue May 10 19:24:13 2016 +1000
+
+    Title
+    
+    Changed Title to "Vending Machine Program"
+
+commit 1d2ae5317924033c2066be7296b0515427f99151
+Merge: 0d27a1c 377a276
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Tue May 10 19:21:56 2016 +1000
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into Leggett
+
+commit 0d27a1cd057f94a60f4a631c92f61803123c65ed
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Tue May 10 19:21:39 2016 +1000
+
+    Title
+
+commit 377a276ee4a2afc3c487a90819301edf7ce6a723
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Tue May 10 19:19:29 2016 +1000
+
+    Title
+    
+    Changed title to "Team Vending Machine"
+
+commit a2448891551b3464c7de478953a8bc3cd82c1dbf
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Tue May 10 19:14:57 2016 +1000
+
+    Latest Version
+
+commit fa0aac684ce0f0528be3d2676e032230ad1fb5ab
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Tue May 10 19:13:51 2016 +1000
+
+    Delete Vending Machine.html
+
+commit 6aad70959989b535f99c1cc0ca161a0c020f1158
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Tue May 10 19:07:53 2016 +1000
+
+    Update Vending Machine.html
+
+commit aad5301640f56528c06008e28824b6ee1ab85cd8
+Author: kumanator <kumanatorgaming@gmail.com>
+Date:   Tue May 10 18:59:05 2016 +1000
+
+    Team Vending Machine
+    
+    Changed heading from "Vending Machine" to "Team Vending Machine"
+
+commit b71d937bda4a4e35fdf6015870b804e15d86723a
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Tue May 10 18:56:00 2016 +1000
+
+    Update Vending Machine.html
+
+commit ac29f33f382ba4f812347681b1c8ce99658be56b
+Merge: f4b7072 eddee42
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Tue May 10 18:51:36 2016 +1000
+
+    Merge pull request #14 from Leggett99/local
+    
+    Form Reset
+
+commit eddee4296a909b0a3053406bc17de2060945a944
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Tue May 10 18:48:23 2016 +1000
+
+    Form Reset
+    
+    Fixed Form to reset when password is submitted - Needs testing
+
+commit f4b7072f20547f3c3c9849eb830ee3bf86382f44
+Merge: 7c035d9 50d9669
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Tue May 10 18:42:10 2016 +1000
+
+    Merge pull request #13 from Leggett99/local
+    
+    Removed Commented Code
+
+commit 50d96693cf5a2416e263adbc0138142882bb6632
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Tue May 10 18:40:56 2016 +1000
+
+    Removed Commented Code
+    
+    ASDFGARGTDTYYD
+
+commit 7c035d9a4f08c48437e5f8660856460acdbff62a
+Merge: df1f5cb f304c91
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Tue May 10 17:21:43 2016 +1000
+
+    Merge pull request #12 from Leggett99/local
+    
+    Local
+
+commit f304c911bab70c964d19583cacedb96799f5c2a6
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Mon May 9 10:00:18 2016 +1000
+
+    Update To-Do.txt
+
+commit df1f5cbdc92e0348ea73f0633d0e61d9355cf447
+Merge: f6848ff c206849
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Mon May 9 07:29:49 2016 +1000
+
+    Merge pull request #11 from Leggett99/local
+    
+    Local
+
+commit c2068498536efdb76d08bee4ada64706c85e6a0f
+Merge: 7f0c9fd 4f789da
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Mon May 9 07:29:16 2016 +1000
+
+    Merge branch 'local' of https://github.com/Leggett99/Vending into local
+
+commit 7f0c9fdbce48492997a41491748fcccd6a594dca
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Mon May 9 07:29:09 2016 +1000
+
+    Update
+    
+    Updated from CollabEdit
+
+commit 4f789daae4864e2ed798b49b041a6b5cab47decf
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Sun May 8 20:51:20 2016 +1000
+
+    Update To-Do.txt
+
+commit 94d2a7389be70991a19409723e89305e72abb916
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Sun May 8 20:50:37 2016 +1000
+
+    Update To-Do.txt
+
+commit ee73b486cc6fca419e1a253f2befb8bbcb7ea4ec
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Sun May 8 20:48:56 2016 +1000
+
+    Update To-Do.txt
+
+commit 82ad4eddcfc8099e4c06ac217e8cda7e0fcb9ff1
+Merge: 445af83 0a1a0b6
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Sun May 8 12:48:56 2016 +1000
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into local
+
+commit f6848ff771a885a2537d6e3992990a777ba464d3
+Merge: 0a1a0b6 445af83
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Thu May 5 20:24:55 2016 +1000
+
+    Merge pull request #10 from Leggett99/local
+    
+    Almost Password
+
+commit 445af837ab3ca6642426d1de3564c8421f609ca1
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Thu May 5 20:24:01 2016 +1000
+
+    Almost Password
+    
+    The password works, deciding wether or not to use an overlay for the
+    admin panel, js not working how I want it to, will talk to Jay on 6/4/16
+
+commit 0a1a0b6f70fb2abfb94218ea597605701d55af62
+Merge: 42a3de3 ccb4b4a
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Thu May 5 18:33:43 2016 +1000
+
+    Merge pull request #9 from Leggett99/local
+    
+    Major Change
+
+commit ccb4b4a04f1c96e92d5495a0349a38d4bc1c5634
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Thu May 5 18:32:43 2016 +1000
+
+    Major Change
+    
+    Functions for each item to be purchased, easily expandable, in this
+    version there is an overlay for wallet but in next version the overlay
+    will be used for the admin panel with a password
+
+commit 42a3de30a3ab5a687ed603e4784c4802e6d868c7
+Merge: dbb204c 84bc484
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Mon May 2 21:02:08 2016 +1000
+
+    Merge pull request #8 from Leggett99/local
+    
+    Code Addition
+
+commit 84bc484e8a52019cc92b0771eab4f4e1c8684087
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Mon May 2 20:59:57 2016 +1000
+
+    Code Addition
+    
+    Looking into coding the admin panel and changed some code around to be
+    more efficient, no longer takes money away if you cancel the purchase in
+    the confirm() on line 29, looking into different ways to count the
+    purchases with our current system, may need an overhaul
+
+commit dbb204cbabc9cb46884a2a340559694f03f44f64
+Merge: 13407cd 7a6ef9e
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Sat Apr 30 21:13:09 2016 +1000
+
+    Merge pull request #7 from Leggett99/local
+    
+    Local
+
+commit 7a6ef9e92da73bfb18f7e3f40f0fb3a7703530a0
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Sat Apr 30 21:12:12 2016 +1000
+
+    Change in Text
+    
+    CHanged line 42 from dosh to balance in machine is:
+
+commit b1d861af1e2a17b27756d4d5539953cbb65ea55d
+Merge: 5828b51 13407cd
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 22:30:06 2016 +1000
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into local
+
+commit 5828b5127554491a4e4ebf35691a95fed02e1786
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 22:29:47 2016 +1000
+
+    Pay Function
+    
+    Changed the confirm text to "Confirm Payment of $..."
+
+commit b4c269c3668481f8994b329ea0f0a6a57f51cc87
+Merge: 02fe1f3 d23491f
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 22:25:00 2016 +1000
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into local
+
+commit 13407cd25bd2d41b3bb82e3dff43d3568f755253
+Merge: d23491f 02fe1f3
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 22:24:32 2016 +1000
+
+    Merge pull request #6 from Leggett99/local
+    
+    Images
+
+commit 02fe1f308c3b32a9e3a4f77794226669dce6c65f
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 22:23:55 2016 +1000
+
+    Images
+    
+    Moved around some files and changed the code to make images visible on
+    the page
+
+commit d23491f5148eed2cb35bbed66106682757f1d297
+Merge: 44cec14 47817e6
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 22:19:22 2016 +1000
+
+    Merge pull request #5 from Leggett99/local
+    
+    Local
+
+commit 47817e6830d9b7b6ada24f024b8d6ff9aaaea9ce
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 22:18:27 2016 +1000
+
+    Canvas Update
+    
+    Doesn't work yet
+
+commit e49b135ef56fafb57300d8f96e88b5671abc8ade
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 22:03:39 2016 +1000
+
+    Testing the Canvas for the wallet overlay
+
+commit ac906ac09be6640453e054abd444e0a490c7a869
+Merge: c42622b 44cec14
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 22:03:26 2016 +1000
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into local
+
+commit 44cec14a7afd2101c93128829848632b2d2619d2
+Merge: 485cb37 c42622b
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 17:24:32 2016 +1000
+
+    Merge pull request #4 from Leggett99/local
+    
+    To Do
+
+commit c42622b3bea02a37b338936a825d57e9ce7e601a
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 17:23:58 2016 +1000
+
+    File Change
+    
+    Removing of old files and renaming.
+
+commit b5cfdcf8fff3126f9c638dc065f5b7f84259d004
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 17:22:39 2016 +1000
+
+    To Do
+    
+    A small to do list that will be updated
+
+commit 485cb37867afad47968be3d8d18f0f21359e069a
+Merge: 60b3b2e 7ce9948
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 17:18:08 2016 +1000
+
+    Merge pull request #3 from Leggett99/local
+    
+    Changed visible page title
+
+commit 7ce994822591d088977de9d14cfee6cce5ea3452
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 17:17:26 2016 +1000
+
+    Title
+
+commit bb6a1b76779b1ec5c00c374b5886960315c81d9f
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 17:16:41 2016 +1000
+
+    Changed visible page title
+
+commit 60b3b2ec0fd680fab112aae1e74cc6155734c7c5
+Merge: 9ca6018 470ae03
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 17:13:42 2016 +1000
+
+    Merge pull request #2 from Leggett99/local
+    
+    Local
+
+commit 470ae03dc9a3978edccb6ea3f55becc4fe6264eb
+Merge: 33412b9 4837635
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 17:13:18 2016 +1000
+
+    Merge branch 'local' of https://github.com/Leggett99/Vending into local
+
+commit 33412b9296f4046af699223f478de3a6f76d4afc
+Merge: 5a5cde6 9ca6018
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 17:04:24 2016 +1000
+
+    Merge remote-tracking branch 'refs/remotes/origin/master' into local
+
+commit 48376357ccaa94dd5613638749a446767eb5b305
+Merge: 5a5cde6 0e94d1e
+Author: Leggett99 <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 17:02:45 2016 +1000
+
+    Merge pull request #1 from Leggett99/master
+    
+    Removed Everything
+
+commit 9ca6018264ceb23e7aebb93a5ac62be864f54b99
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 17:02:09 2016 +1000
+
+    Added images and Code
+    
+    This version has basic algorithm functions for adding money, charging
+    and change with basic buttons
+
+commit 0e94d1e5315217a3693fb43f75fbc8a965cf1947
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 16:59:29 2016 +1000
+
+    Removed Everything
+
+commit 5a5cde6020eaa46e5e630cc88d9e24d5a83cd7d0
+Author: Leggett <joshualeggett99@outlook.com>
+Date:   Fri Apr 29 16:43:16 2016 +1000
+
+    Old Stuff
+    
+    This is the stuff from Google Drive, old layout but the code
+    "d5hqs.html" is updated

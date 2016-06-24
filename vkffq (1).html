@@ -79,6 +79,7 @@
              var chippacketsnd = new Audio("chip packet.ogg");
              var wallet = 0;
              var stock = new Array();
+             var z = "";
              //coke stock
              stock[0] = 8;
              //pepsi stock
@@ -159,13 +160,15 @@
                   document.getElementById("sold").innerHTML = "";
                   document.getElementById("purchconf").innerHTML = "";
                 }
-                 
-                }
+            }
 //Confirm Function
-            function confirm(g, y){
-                document.getElementById("sold").innerHTML = "Confirming your purchase:";
-                document.getElementById("purchconf").innerHTML= "<form><input type='button' value='Confirm' onClick='g = 1'>  <input type='button' value='Cancel' onClick='g = 0'></form>";
-                if (g = 1){
+            function conf(y){
+                document.getElementById("sold").innerHTML = "Confirming your purchase: <form name='confirm' onsubmit='return confirm()' method='post'> Name: <input type='button' Value='Yes' name='fname'><br><input type='button' value='No'></form>";
+                z = document.forms['confirm']['fname'].value;
+                setTimeout(confcont(y), 2000);
+}
+            function confcont(y,z){
+                if (z == 'Yes') {
                     if (y = 1){
                         pay_coke();
                     }
@@ -188,7 +191,7 @@
                         pay_dew();
                     }
                 }
-                else {
+                else{
                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
                 }
             }
@@ -390,18 +393,19 @@
         </div>
          <table style="width:100%">
            <tr>
-               <td><p>$4.45</p><img src="Coke.png" alt="coke" style="width:50px;height:125px;" onClick="confirm(y=1)"></td>
-               <td><p>$4.25</p><img src="Fanta.png" alt="fanta" style="width:50px;height:125px;" onClick="confirm(y=2)"></td>        
+               <td><p>$4.45</p><img src="Coke.png" alt="coke" style="width:50px;height:125px;" onClick="conf(1)"></td>
+               <td><p>$4.25</p><img src="Fanta.png" alt="fanta" style="width:50px;height:125px;" onClick="conf(2)"></td>        
                <td>
                   <p id="money"></p>
                   <p id="sold"></p>
                   <p id="purchconf"></p>
                   <p id="npurch"></p>
+
                </td>
            </tr>
            <tr>
-               <td><p>$4.95</p><img src="Pepsi.png" alt="pepsi" style="width:50px;height:125px;" onClick="confirm(y=3)"></td>
-               <td><p>$4.15</p><img src="Solo.png" alt="solo" style="width:50px;height:125px;" onClick="confirm(y=4)"></td>       
+               <td><p>$4.95</p><img src="Pepsi.png" alt="pepsi" style="width:50px;height:125px;" onClick="conf(3)"></td>
+               <td><p>$4.15</p><img src="Solo.png" alt="solo" style="width:50px;height:125px;" onClick="conf(4)"></td>       
                <td>
                  <form>
                     <input type="button" value="Change" onClick="change()">
@@ -409,8 +413,8 @@
                </td>
            </tr>
            <tr>
-               <td><p>$3.60</p><img src="Doritos.png" alt="doritos" style="width:87.5px;height:125px;" onClick="confirm(y=5)"></td>
-               <td><p>$1000</p><img src="lamborghini.jpg" alt="lamborghini" style="width:150px;height:87.5px;" onClick="confirm(y=6)"></td>       
+               <td><p>$3.60</p><img src="Doritos.png" alt="doritos" style="width:87.5px;height:125px;" onClick="conf(5)"></td>
+               <td><p>$1000</p><img src="lamborghini.jpg" alt="lamborghini" style="width:150px;height:87.5px;" onClick="conf(6)"></td>       
                <td>
                   <form id=admin>
                     <p>Password:<input type="password" name="pass"></p>
@@ -419,8 +423,9 @@
                </td>
            </tr>
            <tr>
-               <td><p>$4.20</p><img src="Mountaindew.jpg" alt="dew" style="width:50px;height:125px;" onClick="confirm(y=7)"></td>
+               <td><p>$4.20</p><img src="Mountaindew.jpg" alt="dew" style="width:50px;height:125px;" onClick="confirm(7)"></td>
        </table>
+
                         <center>
 
                             <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="Wallet.png" alt="Wallet" style="width:150px;height:125px;"></span>
