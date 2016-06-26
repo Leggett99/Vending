@@ -77,13 +77,20 @@ background image
     <head>
        <title>Nick, Tim and Josh Vending Machine</title>
              <script>
-             //Variables
+        //Variables
+			 //coin soind effect
              var coinsnd = new Audio("short_coin_drop.ogg");
+			 //bottle sound effect
              var bottlesnd = new Audio("bottle drop.ogg");
+			 //note sound effect
              var notesnd = new Audio("insert note.ogg");
-             var lambosnd = new Audio("lambo.ogg");
-             var chippacketsnd = new Audio("chip packet.ogg");
+			 //lamborghini sound effect
+			 var lambosnd = new Audio("lambo.ogg");
+			 //chip packet sound effect
+			 var chippacketsnd = new Audio("chip packet.ogg");
+			 //balance in wallet equals zero
              var wallet = 0;
+//stock array
              var stock = new Array();
              //coke stock
              stock[0] = 8;
@@ -144,49 +151,57 @@ background image
              //$100
              notes[4] = 100.0;
 //Money Functions
+			//Function to add coins
              function coin_add(money){
                 //plays the sound of a coin being inserted
                 coinsnd.play();
                 //adds money equal to the value of the coin that was clicked
                 var tempvar = wallet += money;   
-                //creates the local vairable "n" and sets it to 2 decimal places we do this because javascript converts all integers to binary for calculations and then converts them back into integers and sometimes javascript returns an irrational integer
-                var n = wallet.toFixed(2);       
-                //prints the balance to the overlay and the output screen and resets the other lines
+                //creates the local variable "n" and sets it to 2 decimal places
+                var n = wallet.toFixed(2);
+				//prints new balance in machine
                 document.getElementById("money").innerHTML = "Balance: $" + n;
+				//prints new balance in the overlay
                 document.getElementById("overmoney").innerHTML= "Balance: $" + n;
+				//prints 
                 document.getElementById("sold").innerHTML = "";
+				//prints
                 document.getElementById("purchconf").innerHTML = "";
                 }
+			//Function to add notes
              function note_add(money){
-                //plays the sound of a note being inserted into the machine
+				//plays note inserting sound effect
                 notesnd.play();
-               //adds the value of the note selected to the money variable and creates a temp variable locally equal to that value
+				//adds money equal to the value of the note that was clicked
                 var tempvar = wallet += money;   
-                //creates the variable "n" equal to the  of the wallet to 2 decimal places
-                var n = wallet.toFixed(2);       
-                //prints the balance to the overlay and the output screen and then //change function/if the wallet has money in it//creates a local variable equal to the balance of the wallet
-                //sends an alert giving you your change
-                  //sets the value of the machine wallet to 0
-                  //resets the machine to normal without refreshing the page
-                  //if there is no money in the wallet, then it sets the machine to default, this is so we can call it on machine startup and it will look normal.
-                //prints "Welcome, Please insert some money to continue." to the screen and resets the other lines.
-                //coke stock
-             
+				//creates a new local variable "n" and sets it to 2 deciaml places
+                var n = wallet.toFixed(2);
+				//prints new balance in machine
                 document.getElementById("money").innerHTML = "Balance: $" + n;
+				//prints new balance in the overlay
                 document.getElementById("overmoney").innerHTML= "Balance: $" + n;
+				//prints 
                 document.getElementById("sold").innerHTML = "";
+				//prints
                 document.getElementById("purchconf").innerHTML = "";
                 }
+			//Function to return money as change
              function change(){
+			 //checks to see if wallet is greater than zero
                 if(wallet>0){
+				//if yes
                   var money1 = wallet;
+				  //creates a pop up of the amount of change
                   alert ("Your change is $" + money1);
                   wallet = 0;
+				  //Displays the welcome message
                   document.getElementById("money").innerHTML = "Welcome, Please insert some money to continue.";
                   document.getElementById("sold").innerHTML = "";
                   document.getElementById("purchconf").innerHTML = "";
                 }
+				//if no
                 else{
+				//displays welcome message
                   document.getElementById("money").innerHTML = "Welcome, Please insert some money to continue.";
                   document.getElementById("sold").innerHTML = "";
                   document.getElementById("purchconf").innerHTML = "";
@@ -194,27 +209,44 @@ background image
                  
                 }
    //Admin Panel
+			//Refills stock to maximum//
              function refill(){
+			 //stock of coke
                 stock[0] = 8;
+				//stock of pepsi
                 stock[1] = 8;
+				//stock of fanta
                 stock[2] = 8;
+				//stock of solo
                 stock[3] = 8;
+				//stock of doritos
                 stock[4] = 8;
+				//stock of lamborghinis
                 stock[5] = 1;
+				//stock of mountain dew
                 stock[6] = 8;
-                document.getElementById("purchconf").innerHTML = "Coke left: " +stock[0] + "<br> Pepsi left: " + stock[1] + "<br> Fanta left: " + stock[2] + "<br> Solo left: " + stock[3] + "<br> Doritos left: " + stock [4] + "<br> Lambos left: " + stock[5] + "<br> Mountain dew left: " + stock[6];
+				//The display of how much "stock" is left//
+                document.getElementById("purchconf").innerHTML = "Coke left: " +stock[0] + "<br> Pepsi left: " + stock[1] + "<br> Fanta left: " + stock[2] + "<br> Solo left: " + stock[3] + "<br> Doritos left: " + stock [4] + "<br> Lambos left: " + stock[5] + "<br> Mountain Dew left: " + stock[6];
             }
             function Admin(x) {
+			//check if password is correct
                 if(x.pass.value == "pass"){
+				//if yes
+				//displays welcome message
                     document.getElementById("money").innerHTML = "Welcome Admin!";
+					//display of the items sold
                     document.getElementById("sold").innerHTML = "Amount of Cokes sold since last stock: " + sold[0] + "<br>Amount of Pepsi sold since last stock: " + sold[1] + "<br>Amount of Fanta sold since last stock: " + sold[2] + "<br>Amount of Solo sold since last stock: " + sold[3] + "<br>Amount of Doritos sold since last stock: " + sold[4] + "<br>Amount of Lamborghinis sold since last stock: " + sold[5] + "<br>Amount of Mountain dew left: " + sold[6];
-                    document.getElementById("purchconf").innerHTML = "Coke left: " +stock[0] + "<br> Pepsi left: " + stock[1] + "<br> Fanta left: " + stock[2] + "<br> Solo left: " + stock[3] + "<br> Doritos left: " + stock[4] + "<br> Lambos left: " + stock[5] + "<br> Mountain Dew left: " + stock[6]; 
-                   document.getElementById("npurch").innerHTML = "<button onClick='readrst()'>Return</button><button onClick='refill()'>Fill Stock</button>";
+                    //display of items left in stock 
+				    document.getElementById("purchconf").innerHTML = "Coke left: " +stock[0] + "<br> Pepsi left: " + stock[1] + "<br> Fanta left: " + stock[2] + "<br> Solo left: " + stock[3] + "<br> Doritos left: " + stock[4] + "<br> Lambos left: " + stock[5] + "<br> Mountain Dew left: " + stock[6]; 
+                    //display 
+				    document.getElementById("npurch").innerHTML = "<button onClick='readrst()'>Return</button><button onClick='refill()'>Fill Stock</button>";
                     document.getElementById("admin").reset();
                 }
+				//if no
                 else{
-                    document.getElementById("purchconf").innerHTML = "Invalid Password Entered, Access is Denied";
-                    document.getElementById("money").innerHTML = "";
+                 //prints deny message  
+				    document.getElementById("purchconf").innerHTML = "Invalid Password Entered, Access is Denied";   
+					document.getElementById("money").innerHTML = "";
                     document.getElementById("admin").reset();
                     return false;
                 }
@@ -234,6 +266,7 @@ background image
                 document.getElementById("myNav").style.width = "0%";
                 }
     //Item Payment Functions
+	//fucntion to buy coke
              function pay_coke(){
                 //Checking to see if there is enough in stock
                 if(stock[0] > 0){
@@ -273,6 +306,7 @@ background image
                         document.getElementById("purchconf").innerHTML = "Our stock of coke is actually out at the moment, contact the admin to get more stock in."
                     }
              }
+			 //function to buy pepsi
              function pay_pepsi(){
                 //Checking to see if there is enough in stock
                 if(stock[1] > 0){
@@ -313,127 +347,208 @@ background image
                     }
                  
              }
+			 //function to buy fanta
              function pay_fanta(){
+				//checking to see if there is enough fanta available
                 if(stock[2] > 0){
+				//Checking to see if money in the machine is more than the price of the item
                     if(wallet>4.25){
+					//confirming the purchase
                         var r = confirm("Confirming payment of $4.25")
+						//if yes
                             if (r == true) {
+							//prints the readout "Thank you for your purchase"
                                  document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
+								 //creates a new variable equal to the money in your wallet minus the price of the item
                                     var tempvar = wallet -= 4.25;
+									//creates a new variable that is wallet to 2 decimal places
                                     var n = wallet.toFixed(2);
+									//adds one to the sold count
                                     sold[2] += 1;
+									//subtracts one from the stock count for this item.
                                     stock[2] -= 1;
+									//plays the sound of the bottle dropping
                                     bottlesnd.play();
-                                }
+                                }	
+								//if no
                                 else{
+								//prints readout
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
                                 } 
-                            document.getElementById("money").innerHTML = "Balance: $" + n
+								//displays balance
+                            document.getElementById("money").innerHTML = "Balance: $" + n				
                         }
+						//prints this if the user doesnt have enough money to make purchase
                         else{
                             document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
                         }
                     }
+					//prints this if stock is out
                     else{
                         document.getElementById("purchconf").innerHTML = "Our stock of Fanta is actually out at the moment, contact the admin to get more stock in."
                     }
              }
+			 //fucntion to buy solo
              function pay_solo(){
+			 //checking to see if there is enough solo available
                 if(stock[3] > 0){
+				//check to see if money in machine is greater than price
                     if(wallet>4.15){
+					//confirms purchase
                         var r = confirm("Confirming payment of $4.15")
+						//if yes
                             if (r == true) {
+							//prints readout
                                  document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
+								 //creates a new variable equal to the money in your wallet minus the price of the item
                                     var tempvar = wallet -= 4.15;
+									//creates a new variable that is wallet to 2 decimal places
                                     var n = wallet.toFixed(2);
+									//adds one to the sold count
                                     sold[3] += 1;
+									//subtracts one from the stock count for this item
                                     stock[3] -= 1;
+									//plays the sound of the bottle dropping
                                     bottlesnd.play();
                                 }
+								//if no
                                 else{
+								//prints readout
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
                                 } 
+								//displays balance
                             document.getElementById("money").innerHTML = "Balance: $" + n
                         }
+						//prints this if the user doesnt have enough money to make the purchase
                         else{
                             document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
                         }
                     }
+					//prints this if the solo is not enough solo in the machine
                     else{
                         document.getElementById("purchconf").innerHTML = "Our stock of Solo is actually out at the moment, contact the admin to get more stock in."
                     }
              }
+			 //function to buy doritos
              function pay_doritos(){
+			 //checks to see if theres enough in stock
                 if(stock[4] > 0){
+				//check to see if theres enough money inserted into the machine
                     if(wallet>3.60){
+					//confirms payment
                         var r = confirm("Confirming payment of $3.60")
+						//if yes
                             if (r == true) {
+							//print readout
                                  document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
+								 //creates a new variable equal to the money in your wallet minus the price of the item
                                     var tempvar = wallet -= 3.60;
+									//creates a new varibale that is wallet to 2 decimal places
                                     var n = wallet.toFixed(2);
+									//adds one to the sold count
                                     sold[4] += 1;
+									//removes one from the stock count
                                     stock[4] -= 1;
-                                    chippacketsnd.play();
+									//plays chip packet sound effect
+									chippacketsnd.play();
                                 }
+								//if no
                                 else{
+								//prints readout
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
                                 } 
+								//displays balance
                             document.getElementById("money").innerHTML = "Balance: $" + n
                         }
+						//prints this if there isnt enough money inserted
                         else{
                             document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
                         }
                     }
+					//prints this if there isnt any stock available
                     else{
                         document.getElementById("purchconf").innerHTML = "Our stock of Doritos is actually out at the moment, contact the admin to get more stock in."
                     }
              }
+			 //Function to buy lamborghini
               function pay_lamborghini(){
+			  //checks if there is theres enough in stock
                 if(stock[5] > 0){
+				//checks to see if theres enough money inserted 
                     if(wallet>999.99){
+					//confirms payment
                         var r = confirm("Confirming payment of $1000")
+						//if yes
                             if (r == true) {
+							//prints readout
                                  document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
+								 //creates a new variable equal to the money in your wallet minus the price of the item
                                     var tempvar = wallet -= 1000.00;
+									//creates a new variable that is wallet to 2 decimal prices
                                     var n = wallet.toFixed(2);
+									//adds one to the sold count
                                     sold[5] += 1;
+									//removes one from the stock count
                                     stock[5] -= 1;
-                                    lambosnd.play();
+									//plays lamborghini sound effect
+									lambosnd.play();
                                 }
+								//if no
                                 else{
+								//prints readout
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
                                 } 
+								//displays balance
                             document.getElementById("money").innerHTML = "Balance: $" + n
                         }
                         else{
+						//prints this if there isnt enough money inserted
                             document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
                         }
                     }
                     else{
+					//prints this if there isnt any in stock
                         document.getElementById("purchconf").innerHTML = "Our stock of Lamborghinis are actually out at the moment, contact the admin to get more stock in."
                     }
             }
+			//Function to buy Mountain dew
             function pay_dew(){
+			//check to tsee if there is any in stock
                 if(stock[6] > 0){
+				//checks to see if ther is enough money inserted into the machine
                     if(wallet>4.20){
+					//confirms payment
                         var r = confirm("Confirming payment of $4.20")
+						//if yes
                             if (r == true) {
+							//prints readout
                                  document.getElementById("purchconf").innerHTML= "Thank you for your purchase!";
+								 //creates a new variable equal to the money in your wallet minus the price of the item
                                     var tempvar = wallet -= 4.20;
+									//creates a new avriable that is wallet to 2 decimal places
                                     var n = wallet.toFixed(2);
+									//adds one to the sold count
                                     sold[6] += 1;
+									//removes one from the stock count
                                     stock[6] -= 1;
-                                    bottlesnd.play();
+									//plays bottle sound effect
+									bottlesnd.play();
                                 }
+								//if no
                                 else{
+								//prints readout
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
+									//prints balance
                                 } 
                             document.getElementById("money").innerHTML = "Balance: $" + n
+							
                         }
+						//prints this if you havent got enough money inserted
                         else{
                             document.getElementById("purchconf").innerHTML= "You haven't got the balance to make that purchase my friend...";
                         }
                     }
+					//prints this if tyhere isnt any in stock
                     else{
                         document.getElementById("purchconf").innerHTML = "Our stock of Mountain Dew are actually out at the moment, contact the admin to get more stock in."
                     }
@@ -441,69 +556,93 @@ background image
          </script>
     </head>
     <h1>Team Vending Machine</h1>
+	<!--loads function "change()"-->
     <body onload="change()">
         <div id="myNav" class="overlay">
-        <!--close button for the overlay-->
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-          <!--This allows the coins to be placed into the overlay--> 
-          <div class="overlay-content">
-             <!--Coin images. When clicked adds money to wallet-->   
+        <div class="overlay-content">
+		<!--Coin pictures. When clicked, adds corresponding value-->
+			<!--5 cents-->
             <img src="5cents.png" alt="5 cents" height="75" width="75" id="1" onClick="coin_add(coins[0])">
+			<!--10 cents-->
             <img src="10cents.png" alt="10 cents" height="85" width="85" onClick="coin_add(coins[1])">
+			<!--20 cents-->
             <img src="20cents.png" alt="20 cents" height="95" width="95" onClick="coin_add(coins[2])">
+			<!--50 cents-->
             <img src="50cents.png" alt="50 cents" height="100" width="100" onClick="coin_add(coins[3])">
+			<!--1 dollar-->
             <img src="1dorra.png" alt="1 dollar" height="85" width="85" onClick="coin_add(coins[4])">
+			<!--2 dollars-->
             <img src="2dorra.png" alt="2 dollars" height="75" width="75" onClick="coin_add(coins[5])">
             <br>
+			<!--Note pictures. When clicked, adds corresponding value-->
+			<!--5 dollar note-->
             <img src="5dorra.png" alt="5 dollars" height="150" width="75" onClick="note_add(notes[0])">
+			<!--10 dollar note-->
             <img src="10dorra.png" alt="10 dollars" height="150" width="75" onClick="note_add(notes[1])">
+			<!--20 dollar note-->
             <img src="20dorra.png" alt="20 dollars" height="150" width="75" onClick="note_add(notes[2])">
+			<!--50 dollar note-->
             <img src="50dorra.png" alt="50 dollars" height="150" width="75" onClick="note_add(notes[3])">
+			<!--100 dollar note-->
             <img src="100dorra.png" alt="100 dollars" height="150" width="75" onClick="note_add(notes[4])">
-           <!--Displays the inserted money-->
-           <p id=overmoney></p>
+
+			<!--displays the amount of money you've added to the machine-->
+            <p id=overmoney></p>
         </div>
         </div>
-        <!--The table which displays the items-->
+		<!--Table-->
          <table style="width:100%">
-           <tr>
+           <!--Table content-->
+		   <tr>
+				<!--Display of coke and fanta with price. When clicked, removes money from machine-->
                <td><p>$4.45</p><img src="Coke.png" alt="coke" style="width:50px;height:125px;" onClick="pay_coke()"></td>
                <td><p>$4.25</p><img src="Fanta.png" alt="fanta" style="width:50px;height:125px;" onClick="pay_fanta()"></td>        
                <td>
+			   <!--displays money in machine-->
                   <p id="money"></p>
+				<!--displays how much the item has sold-->
                   <p id="sold"></p>
+				<!--displays confirmation of purchase...which we didnt end up having on the table-->
                   <p id="purchconf"></p>
+				<!--the stock of the items-->
                   <p id="npurch"></p>
                   <p>Admin Password is pass
 
                </td>
            </tr>
            <tr>
-           jsdjfjdjdjfjdkdjfjdj
-j               <td><p>$4.95</p><img src="Pepsi.png" alt="pepsi" style="width:50px;height:125px;" onClick="pay_pepsi()"></td>
+		   <!--Display of pepsi and solo with price. When clicked, removes money from machine-->
+               <td><p>$4.95</p><img src="Pepsi.png" alt="pepsi" style="width:50px;height:125px;" onClick="pay_pepsi()"></td>
                <td><p>$4.15</p><img src="Solo.png" alt="solo" style="width:50px;height:125px;" onClick="pay_solo()"></td>       
                <td>
                  <form>
+				 <!--Button which returns money in the machine back to the user-->
                     <input type="button" value="Change" onClick="change()">
                  </form>
                </td>
            </tr>
            <tr>
+		   <!--Display of doritos and lamborghini. When clicked removes money from machine-->
                <td><p>$3.60</p><img src="Doritos.png" alt="doritos" style="width:87.5px;height:125px;"onClick="pay_doritos()"></td>
                <td><p>$1000</p><img src="lamborghini.jpg" alt="lamborghini" style="width:150px;height:87.5px;"onClick="pay_lamborghini()"></td>       
                <td>
+			   <!--Creates a place for the admin to input password-->
                   <form id=admin>
+			<!--specifies type and the password-->
                     <p>Password:<input type="password" name="pass"></p>
+					<!--button to confirm password-->
                     <p><input type="button" value="Login" onClick="Admin(this.form)"></p>
                   </form>
                </td>
            </tr>
            <tr>
+		   <!--Display of mountain dew and price. When clicked, removes money from machine-->
                <td><p>$4.20</p><img src="Mountaindew.jpg" alt="dew" style="width:50px;height:125px;" onClick="pay_dew()"></td>
        </table>
-
+						<!--places content in the centre of page-->
                         <center>
-
+						<!--picture of wallet which opens the overlay where you can input money into the machine.-->
                             <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="Wallet.png" alt="Wallet" style="width:150px;height:125px;"></span>
                         </center>
     </body>
