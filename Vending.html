@@ -81,8 +81,8 @@ background image
              var coinsnd = new Audio("short_coin_drop.ogg");
              var bottlesnd = new Audio("bottle drop.ogg");
              var notesnd = new Audio("insert note.ogg");
-             var lambosnd = new Audio("lambo.ogg");
-             var chippacketsnd = new Audio("chip packet.ogg");
+			 var lambosnd = new Audio("lambo.ogg");
+			 var chippacketsnd = new Audio("chip packet.ogg");
              var wallet = 0;
              var stock = new Array();
              //coke stock
@@ -149,29 +149,17 @@ background image
                 coinsnd.play();
                 //adds money equal to the value of the coin that was clicked
                 var tempvar = wallet += money;   
-                //creates the local vairable "n" and sets it to 2 decimal places we do this because javascript converts all integers to binary for calculations and then converts them back into integers and sometimes javascript returns an irrational integer
+                //creates the local vairable "n" and sets it to 2 decimal places
                 var n = wallet.toFixed(2);       
-                //prints the balance to the overlay and the output screen and resets the other lines
                 document.getElementById("money").innerHTML = "Balance: $" + n;
                 document.getElementById("overmoney").innerHTML= "Balance: $" + n;
                 document.getElementById("sold").innerHTML = "";
                 document.getElementById("purchconf").innerHTML = "";
                 }
              function note_add(money){
-                //plays the sound of a note being inserted into the machine
                 notesnd.play();
-               //adds the value of the note selected to the money variable and creates a temp variable locally equal to that value
                 var tempvar = wallet += money;   
-                //creates the variable "n" equal to the  of the wallet to 2 decimal places
                 var n = wallet.toFixed(2);       
-                //prints the balance to the overlay and the output screen and then //change function/if the wallet has money in it//creates a local variable equal to the balance of the wallet
-                //sends an alert giving you your change
-                  //sets the value of the machine wallet to 0
-                  //resets the machine to normal without refreshing the page
-                  //if there is no money in the wallet, then it sets the machine to default, this is so we can call it on machine startup and it will look normal.
-                //prints "Welcome, Please insert some money to continue." to the screen and resets the other lines.
-                //coke stock
-             
                 document.getElementById("money").innerHTML = "Balance: $" + n;
                 document.getElementById("overmoney").innerHTML= "Balance: $" + n;
                 document.getElementById("sold").innerHTML = "";
@@ -373,7 +361,7 @@ background image
                                     var n = wallet.toFixed(2);
                                     sold[4] += 1;
                                     stock[4] -= 1;
-                                    chippacketsnd.play();
+									chippacketsnd.play();
                                 }
                                 else{
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
@@ -398,7 +386,7 @@ background image
                                     var n = wallet.toFixed(2);
                                     sold[5] += 1;
                                     stock[5] -= 1;
-                                    lambosnd.play();
+									lambosnd.play();
                                 }
                                 else{
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
@@ -423,7 +411,7 @@ background image
                                     var n = wallet.toFixed(2);
                                     sold[6] += 1;
                                     stock[6] -= 1;
-                                    bottlesnd.play();
+									bottlesnd.play();
                                 }
                                 else{
                                     document.getElementById("purchconf").innerHTML= "Changed your mind? No worries, perhaps another item?";
@@ -443,11 +431,8 @@ background image
     <h1>Team Vending Machine</h1>
     <body onload="change()">
         <div id="myNav" class="overlay">
-        <!--close button for the overlay-->
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-          <!--This allows the coins to be placed into the overlay--> 
-          <div class="overlay-content">
-             <!--Coin images. When clicked adds money to wallet-->   
+        <div class="overlay-content">
             <img src="5cents.png" alt="5 cents" height="75" width="75" id="1" onClick="coin_add(coins[0])">
             <img src="10cents.png" alt="10 cents" height="85" width="85" onClick="coin_add(coins[1])">
             <img src="20cents.png" alt="20 cents" height="95" width="95" onClick="coin_add(coins[2])">
@@ -460,11 +445,9 @@ background image
             <img src="20dorra.png" alt="20 dollars" height="150" width="75" onClick="note_add(notes[2])">
             <img src="50dorra.png" alt="50 dollars" height="150" width="75" onClick="note_add(notes[3])">
             <img src="100dorra.png" alt="100 dollars" height="150" width="75" onClick="note_add(notes[4])">
-           <!--Displays the inserted money-->
-           <p id=overmoney></p>
+            <p id=overmoney></p>
         </div>
         </div>
-        <!--The table which displays the items-->
          <table style="width:100%">
            <tr>
                <td><p>$4.45</p><img src="Coke.png" alt="coke" style="width:50px;height:125px;" onClick="pay_coke()"></td>
@@ -479,8 +462,7 @@ background image
                </td>
            </tr>
            <tr>
-           jsdjfjdjdjfjdkdjfjdj
-j               <td><p>$4.95</p><img src="Pepsi.png" alt="pepsi" style="width:50px;height:125px;" onClick="pay_pepsi()"></td>
+               <td><p>$4.95</p><img src="Pepsi.png" alt="pepsi" style="width:50px;height:125px;" onClick="pay_pepsi()"></td>
                <td><p>$4.15</p><img src="Solo.png" alt="solo" style="width:50px;height:125px;" onClick="pay_solo()"></td>       
                <td>
                  <form>
