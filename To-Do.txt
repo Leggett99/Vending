@@ -1,6 +1,0 @@
-To Do
-Create GUI
-Create wallet overlay - Almost Complete
-Create Item Counter - Complete, Needs implimentation
-Create Profit Formulae
-Create Admin Overlay with proper functionality - Almost complete
